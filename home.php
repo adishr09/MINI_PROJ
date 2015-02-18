@@ -5,8 +5,8 @@
 </head>
 <body>
 	<div class="top_bar">
-	<p>LogIn</p>
-	<p>SignUp</p>
+	<button onclick="overlay()" type="button"> Hello</button>
+	<p>LogIn  /  SignUp</p>
 	</div>
 	<div class="logo_bar">
 	<p> LOGO </p>
@@ -15,7 +15,12 @@
 	<p> Nav Bar </p>
 	</div>
 	<div class="content_lol">
-		<?php include("author/index.php");?> 
+		<div id="overlay"><p>Hello</p></div>
 	</div>
+	<script>
+	function overlay(){
+	document.getElementByID("overlay").style.display="inline";
+	}
+	</script>
 </body>
 </html>

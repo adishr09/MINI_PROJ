@@ -1,5 +1,6 @@
 html{
 	color:#0e0e0e;
+	background-color:rgba(240,240,240,1);	
 }
 
 body{
@@ -10,9 +11,12 @@ body{
 	display:inline;
 	position:relative;
 	float:left;
-	width:100%;
+	width:99.5%;
 	height:5%;
-	background-color:blue;
+	text-align:right;
+	padding:5px;
+	border-radius: 0 0 15px 15px;
+	background-color:rgba(0,38,254,0.7);
 }
 
 .logo_bar{
@@ -21,7 +25,7 @@ body{
 	float:left;
 	width:100%;
 	height:15%;
-	background-color:yellow;
+	
 }
 
 .nav_bar{
@@ -30,7 +34,7 @@ body{
 	float:left;
 	width:100%;
 	height:10%;
-	background-color:orange;
+	background-color:rgba(0,0,0,0.1);	
 }
 
 .content_lol{
@@ -39,5 +43,19 @@ body{
 	float:left;
 	width:100%;
 	height:100%;
-	background-color:green;
+}
+
+#overlay {
+    position: fixed;
+    top: 22.5%;
+    left: 15%;
+    width: 70%;
+    height: 55%;
+    background-color: #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+	display:none;
+    z-index: 10000;
 }
