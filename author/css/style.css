@@ -8,7 +8,7 @@
 .tabs input {
 	position: absolute;
 	z-index: 1000;
-	width: 120px;
+	width: 162px;
 	height: 40px;
 	left: 0px;
 	top: 0px;
@@ -43,7 +43,7 @@
 	padding: 0 20px;
     float: left;
 	display: block;
-	width: 80px;
+	width: 190px;
 	color: #385c5b;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -100,8 +100,8 @@
 .content {
    background: #fff;
 	position: relative;
-    width: auto;
-	margin: -175px 0 0 120px;
+    width: 80%;
+	margin: -160px 0 0 120px;
 	height: 500px;
 	z-index: 5;
 	overflow: auto;

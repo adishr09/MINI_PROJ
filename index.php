@@ -5,14 +5,13 @@
 </head>
 <body>
 	<div class="top_bar">
-	<p>LogIn</p>
-	<p>SignUp</p>
+	<p>LogIn / SignUp</p>
 	</div>
 	<div class="logo_bar">
 	<p> LOGO </p>
 	</div>
 	<div class="nav_bar">
-	<p> Nav Bar </p>
+		<?php include("Nav_Bar/nav_bar.php");?>
 	</div>
 	<div class="content_lol">
 		<?php include("author/index.php");?> 
