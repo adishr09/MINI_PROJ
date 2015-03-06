@@ -41,10 +41,59 @@
 				    </div>
 			        <div class="content-2">
 						<h2>Submit Manuscript</h2>
-                        <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that\'s what you see at a toy store. And you must think you\'re in a toy store, because you\'re here shopping for an infant named Jeb.</p>
-						<h3>Excellence</h3>
-						<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That\'s Cesar\'s world, and if you\'re not willing to play by his rules, then you\'re gonna have to pay the price. </p>
-				    </div>
+                        <form id=\'register\' action=\'register.php\' method=\'post\' accept-charset=\'UTF-8\'>
+							<legend>Register</legend>
+      
+							<label>
+							Full Name  *
+							<input type=\'text\' name=\'name\' id=\'name\' maxlength="50" /> 
+							</label>
+	   
+							<label>
+							Email Address  *
+							<input type=\'text\' name=\'email\' id=\'email\' maxlength="50" /> 
+							</label>
+
+							  <label>
+							   Contact No.*
+								<input type=\'text\' name=\'username\' id=\'username\' maxlength="50" /> 
+							  </label> 
+							  
+							  <label>
+								Subject Category*:
+								 <select>
+								 <option value="Sub1">s1</option>
+								 <option value="sub2">s2</option>
+								 <option value="sub3">s3</option>
+								 <option value="sub4">s4</option>
+								  </select>
+							  </label>
+							  
+							  <label>
+								Paper Type*:
+								 <input type=\'password\' name=\'password\' id=\'password\' maxlength="50" /> 
+							  </label>
+
+							  
+							  <label> 
+							   Gender*:      
+								<input type="radio" name="sex" value="male"> M
+								<br><br><br>
+								<input type="radio" name="sex" value="female"> F
+							  </label>
+							  
+							  <label>
+								Abstract*:
+								 <textarea rows="4" cols="50">
+								  </textarea>		 
+							  </label>
+
+							  <input type=\'hidden\' name=\'submitted\' id=\'submitted\' value=\'1\' class="form_input"/>
+							  
+							  
+							  <input type=\'submit\' name=\'Submit\' value=\'Submit\' />
+							  </form>
+					</div>
 			        <div class="content-3">
 						<h2>Portfolio</h2>
                         <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother\'s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
