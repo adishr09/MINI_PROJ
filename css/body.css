@@ -16,7 +16,7 @@ body{
 	text-align:right;
 	padding:5px;
 	border-radius: 0 0 15px 15px;
-	background-color:rgba(0,38,254,0.7);
+	background-color:rgba(45, 70, 210, 0.7);
 }
 
 .logo_bar{
@@ -53,7 +53,7 @@ body{
 	height:70%;
 	padding:2%;
 	margin:7% 7%;
-	border:5px solid pink;
+	border:5px solid rgb(126, 126, 126);
 	border-radius:15px;
 }
 
@@ -65,7 +65,7 @@ body{
 	height:70%;
 	padding:2%;
 	margin:7% 7%;
-	border:5px solid pink;
+	border:5px solid rgb(126, 126, 126);
 	border-radius:15px;
 }
 

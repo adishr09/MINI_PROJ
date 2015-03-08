@@ -89,11 +89,10 @@ section button {
 	background: #a9a9a9;
 	color: #fff;
 	font-weight: 400;
-	padding: 10px 20px;
+	padding: 14px 20px;
 	margin: 5px;
 	text-transform: uppercase;
 	border-radius: 2px;
-	letter-spacing: 1px;
 }
 
 .codrops-demos a:hover,
@@ -107,7 +106,7 @@ section button {
 	outline: none;
 	margin:-11px -5px;
 	border-radius: 0 0 15px 0;
-	background-color:rgba(0,180,254,0.6);
+	background-color:rgba(0,180,254,0.0);
 }
 
 .related > a {
