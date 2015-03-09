@@ -2,7 +2,6 @@
 		
 		<link rel="stylesheet" type="text/css" href="Nav_Bar/css/style.css" />
 		<center>
-		<div class="nav" style="background:rgba(236, 236, 236, 1);">
 		<ul id="nav1">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="#">About JMDET</a>
@@ -45,6 +44,5 @@
 			</li>
 			<li><a href="contact_us.html">Contact Us</a></li>
 		</ul>
-		</div>
 		</center>
 	'	;?>
