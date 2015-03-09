@@ -3,7 +3,7 @@
 		<link rel="stylesheet" type="text/css" href="Nav_Bar/css/style.css" />
 		<center>
 		<ul id="nav1">
-			<li><a href="index.html">Home</a></li>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="#">About ARISTIDE</a>
 				<ul>
 					<li><a href="mission_vision.html">MISSION & VISION</a></li>

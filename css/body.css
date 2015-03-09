@@ -41,8 +41,12 @@ body{
 	display:inline-block;
 	position:relative;
 	float:left;
-	width:100%;
+	margin:5% 5%;
+	width:90%;
 	height:100%;
+	border:2px solid grey;
+	padding:2%;
+	background-color:rgba(0,0,0,0.1);	
 }
 
 .left{
