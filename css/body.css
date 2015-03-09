@@ -12,9 +12,9 @@ body{
 	position:relative;
 	float:left;
 	width:99.2%;
-	height:5%;
+	height:4%;
 	text-align:right;
-	padding:5px;
+	padding:0px;
 	border-radius: 0 0 15px 15px;
 	background-color:rgba(110, 110, 110, 1);
 }
