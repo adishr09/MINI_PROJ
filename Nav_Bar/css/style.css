@@ -1,9 +1,8 @@
 #nav1 {
 	margin: 0;
 	padding: 7px 0 0 10%;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(47, 86, 116, 1)), color-stop(98%,rgba(0, 0, 0, 1)));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(90, 161, 161, 1)), color-stop(98%,rgba(84, 151, 150, 1)));
 	line-height: 100%;
-	font-size:.8em;
 	z-index:1000;
 	width:90%;
 }
@@ -19,8 +18,8 @@
 
 /* main level link */
 #nav1 a {
-	font-weight: bold;
-	color: rgb(218, 218, 218);
+	font-weight: 400;
+	color: rgb(241, 241, 241);
 	text-decoration: none;
 	display: block;
 	padding:  8px 20px;
