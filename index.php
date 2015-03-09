@@ -1,4 +1,4 @@
-<html>
+<html style="overflow-x:hidden;">
 <head>
 	<title>Aristdie - CMS </title>
 	<link rel="stylesheet" href="css/body.css" type="text/css">
