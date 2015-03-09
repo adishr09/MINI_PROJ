@@ -44,65 +44,42 @@
 						<h2>Submit Manuscript</h2>
                         
 						<form id=\'register\' action=\'author/validate.php\'  method=\'post\' accept-charset=\'UTF-8\'>
-							<legend><b>Register</b></legend>
 							<fieldset>
-      
-							
-							
-							<label>
-							Full Name  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type=\'text\' name=\'name\' id=\'name\' value=\'  \' maxlength="50" /> 
-							</label><br><br>
-	   
-							<label>
-							Email Address  * &nbsp;&nbsp;&nbsp;
-							<input type=\'text\' name=\'email\' id=\'email\' maxlength="50" /> 
-							</label><br><br>
-
+							<table>
+							<tr><td>  
 							  <label>
-							   Contact No.* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type=\'text\' name=\'username\' id=\'username\' maxlength="50" /> 
-							  </label><br><br>
-							  
+							   File Name:
+								</td><td><input type=\'file\' name=\'username\' id=\'username\' maxlength="50" /> 
+							  </label></td></tr>
+							  <tr><td> 
 							  <label>
-							   File Name* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type=\'file\' name=\'username\' id=\'username\' maxlength="50" /> 
-							  </label><br><br>
-							  
-							  <label>
-								Subject Category*:
-								 <select>
+								Subject Category:
+								 </td><td><select>
 								 <option value="Sub1">s1</option>
 								 <option value="sub2">s2</option>
 								 <option value="sub3">s3</option>
 								 <option value="sub4">s4</option>
 								  </select>
-							  </label><br><br>
-							  
+							  </label></td></tr>
+							  <tr><td> 
 							  <label>
-								Paper Type*: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								 <input type=\'text\' name=\'paper\' id=\'paper\' maxlength="50" /> 
-							  </label><br><br>
+								Paper Type:
+								 </td><td><input type=\'text\' name=\'paper\' id=\'paper\' maxlength="50" /> 
+							  </label></td></tr>
 
 							  
-							  <label> 
-							   Gender*:<br>      
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type="radio" name="sex" value="male"> M
-								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<input type="radio" name="sex" value="female"> F
-							  </label><br><br>
-							  
+							  <tr><td> 
 							  <label>
-								Abstract*:
-								 <textarea rows="4" cols="50">
+								Abstract:
+								 </td><td><textarea rows="4" cols="50">
 								  </textarea>		 
-							  </label><br><br>
+							  </label></td></tr>
 
 							  <input type=\'hidden\' name=\'submitted\' id=\'submitted\' value=\'1\' class="form_input"/>
 							  
-							  
+							  <tr><td>
 							  <input type=\'submit\' name=\'Submit\' class=\'button\' value=\'Submit\' />
+							  </td></tr></table>
 							  </form>
 					
                            
