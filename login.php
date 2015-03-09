@@ -2,25 +2,37 @@
 	
 session_start();
 
-if(isset($_POST['user']) && isset($_POST['pass']))
+if(isset($_POST['log_email']) && isset($_POST['log_pass']))
 {
-$u=$_POST['user'];
-$p=$_POST['pass'];
-echo $u;
-echo $p."<br><br>";
-
-mysql_connect('sandbox.ieee.org', 'delhibvce', 'hdb32wb98') or die("<br/>error");
-mysql_select_db('delhibvce') or die("<br>DB_error");
-$q="SELECT * FROM `art_author` WHERE pass='".$p."'";
-
+$log_email=$_POST['log_email'];
+$log_pass=$_POST['log_pass'];
+$cars = $_POST['cars'];
+$tem = md5($log_pass);
+switch($cars)
+    {
+      case "author":
+      echo "1";
+      $q="SELECT * FROM `art_author` WHERE email_id='".$log_email."'";
+ break;
+ 
+      case "reviewer": 
+      echo "2";
+         $q="SELECT * FROM `art_reviewer` WHERE email_id='".$log_email."'"; break;
+}      
+     
+mysql_connect('localhost', 'root', '') or die("<br/>error");
+mysql_select_db('project') or die("<br>DB_error");
 $q_run=mysql_query($q) or die("<br/>error_run");
 $q_row=mysql_fetch_assoc($q_run);
-echo '<br>'.$q_row['uname']; 
-$uname=$q_row['uname'];
-$end = $q_row['done'];
-if($uname==$u && $end == 0 ){$_SESSION['uname']=$u; 
-header( 'Location: index_new.php' ) ;
+
+$fname=$q_row['first_name'];
+$lname=$q_row['last_name'];
+echo '<br>'.$fname; 
+
+if(strcmp($tem,$q_row['pass']) ){
+    $_SESSION['$fname']=$fname;
+    header( 'Location: home.php' ) ;
 }
-else if ($end != 0 ){header( 'Location: end.php' ) ;}
+else {header( 'Location: error.php' ) ;}
 }
 ?>
