@@ -5,7 +5,7 @@ session_start();
 if(isset($_POST['sign_email']) && isset($_POST['sign_pass']))
 {
 $sign_email=$_POST['sign_email'];
-$sign_pass=$_POST['sign_pass'];
+$sign_pass=(md5)$_POST['sign_pass'];
 $fname=$_POST['fname'];
 $mname=$_POST['mname'];
 $lname=$_POST['lname'];

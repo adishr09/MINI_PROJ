@@ -23,7 +23,7 @@
 	z-index: 10;
 	bottom: 0;
 	width: 100%;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(66,158,229,1)), color-stop(100%,rgba(58,183,255,1)));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(90, 162, 162, 1)), color-stop(100%,rgba(78, 141, 139, 1)));
 	text-align: center;
 	padding: 0 2px;
 	margin: 0;

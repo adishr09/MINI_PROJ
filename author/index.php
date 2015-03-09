@@ -16,7 +16,7 @@
 				}
 			</style>
 		<![endif]-->
-    <body>
+    <body style="background-color:rgba(240, 240, 240, 1);">
         <div class="container">
 		 	<header>
 			</header>
