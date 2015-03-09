@@ -5,7 +5,6 @@
 </head>
 <body>
 	<div class="top_bar">
-	<p>LogIn / SignUp</p>
 	</div>
 	<div class="logo_bar">
 	<p> LOGO </p>
