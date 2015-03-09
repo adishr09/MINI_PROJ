@@ -11,16 +11,16 @@
 					<li><a href="advisory_board.html">ADVISORY BOARD</a></li>
 				</ul>
 			</li>
-			<li><a href="#">INSTALLATION</a>
+			<li><a href="#">Installation</a>
 				<ul>
 					<li><a href="call_for_papers.html">LEAFLET</a></li>
 					<li><a href="current_issue.html">CURRENT ISSUE</a></li>
 					<li><a href="submit_manuscript_c.html">SUBMIT MANUSCRIPT</a></li>
 				</ul>
 			</li>
-			<li><a href="#">NEWS</a>
+			<li><a href="#">News</a>
 			</li>
-			<li class="current"><a href="#">USERS</a>
+			<li class="current"><a href="#">Users</a>
 			</li>
 			<li><a href="#">Licenses</a>
 				
