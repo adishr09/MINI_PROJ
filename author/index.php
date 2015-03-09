@@ -43,7 +43,7 @@
 			        <div class="content-2">
 						<h2>Submit Manuscript</h2>
                         
-						<form id=\'register\' action=\'validate.php\'  method=\'post\' accept-charset=\'UTF-8\'>
+						<form id=\'register\' action=\'author/validate.php\'  method=\'post\' accept-charset=\'UTF-8\'>
 							<legend><b>Register</b></legend>
 							<fieldset>
       
@@ -51,7 +51,7 @@
 							
 							<label>
 							Full Name  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type=\'text\' name=\'name\' id=\'name\' value=\'<?php echo $valid_name; ?> \' maxlength="50" /> 
+							<input type=\'text\' name=\'name\' id=\'name\' value=\'  \' maxlength="50" /> 
 							</label><br><br>
 	   
 							<label>
@@ -62,6 +62,11 @@
 							  <label>
 							   Contact No.* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<input type=\'text\' name=\'username\' id=\'username\' maxlength="50" /> 
+							  </label><br><br>
+							  
+							  <label>
+							   File Name* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type=\'file\' name=\'username\' id=\'username\' maxlength="50" /> 
 							  </label><br><br>
 							  
 							  <label>

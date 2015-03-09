@@ -1,6 +1,5 @@
-
 <?php
-
+	
 session_start();
 
 if(isset($_POST['user']) && isset($_POST['pass']))
@@ -12,7 +11,7 @@ echo $p."<br><br>";
 
 mysql_connect('sandbox.ieee.org', 'delhibvce', 'hdb32wb98') or die("<br/>error");
 mysql_select_db('delhibvce') or die("<br>DB_error");
-$q="SELECT * FROM `maths_fervour_2014` WHERE pass='".$p."'";
+$q="SELECT * FROM `art_author` WHERE pass='".$p."'";
 
 $q_run=mysql_query($q) or die("<br/>error_run");
 $q_row=mysql_fetch_assoc($q_run);
@@ -24,21 +23,4 @@ header( 'Location: index_new.php' ) ;
 }
 else if ($end != 0 ){header( 'Location: end.php' ) ;}
 }
-
-if($_POST)
-{
-  $name=$_POST['name'];
-  echo $name;
- }
-
- if (eregi('^[A-Za-z0-9 ]{3,20}$',$name))
-{
-$valid_name=$name;
-}
-else
-{ 
-$error_name='Enter valid Name.'; 
-}
-
-
- ?>
+?>
