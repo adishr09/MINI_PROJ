@@ -40,7 +40,7 @@
 			<p> LOGO </p>
 		</div>
 		<div class="nav_bar">
-			<p> Nav Bar </p>
+			<?php include("Nav_Bar/nav_bar.php");?>
 		</div>
 		<div class="content_lol">
 			<!-- Top Navigation -->
