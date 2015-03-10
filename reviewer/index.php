@@ -39,16 +39,20 @@
 						<h2>Profile of the Admin</h2>
                         
 				    </div>
+                    
 			        <div class="content-2">
 						<h2>Response</h2>
                         <form id=\'response\' action=\'response.php\' method=\'post\' accept-charset=\'UTF-8\'>
-							<legend>Response</legend>
-      
+						<legend>Response</legend>
+                        <table>                
+                        <tr><td>
 							<label>
 						    Reviewer Id  *
-							<input type=\'text\' name=\'name\' id=\'name\' maxlength="50" /> 
+							<input type=\'text\' name=\'rev_id\' id=\'rev_id\' maxlength="50" /> 
 							</label>
-	   
+                            </td></tr>
+                        
+                        <tr><td>
 							<label>
 								Subject Category*:
 								 <select>
@@ -58,26 +62,31 @@
 								 <option value="res4">s4</option>
                                  </select>
                              </label>
-
+                            </tr></td>
+                        
+                        <tr><td>
                             <label>
                                 Paper Id*:
 								 <input type=\'paper_id\' name=\'papid\' id=\'papid\' maxlength="50" /> 
                             </label>
-  
+                            </tr></td>
+                        
+                        <tr><td>
 							<label>
 								Paper Type*:
 								 <input type=\'password\' name=\'password\' id=\'password\' maxlength="50" /> 
 							</label>
-
-							
-							  
-							<label>
+                            </tr></td>
+						
+                        <tr><td>
+                            <label>
 								Response(In Words)*:
 								 <textarea rows="4" cols="50">
 								 </textarea>		 
 							</label>
-
-
+                            </tr></td>
+                        
+                        <tr><td>
 							<label>
 								Response*:
                                 <select>
@@ -86,14 +95,19 @@
 								 <option value="sub3">Acepted with Minor Corrections</option>
 								</select>
 							</label>
-
-
+                            </tr></td>
+                        
+                        <tr><td>
 							<input type=\'hidden\' name=\'submitted\' id=\'submitted\' value=\'1\' class="form_input"/>
-							<input type=\'submit\' name=\'Submit\' value=\'Submit\' />
-						</form>
+                            <input type=\'submit\' name=\'Submit\' value=\'Submit\' />
+						    </tr></td>
+                            </table>
+                        </form>
 					</div>
-			        <div class="content-3">
-						<h2>Portfolio</h2>
+			    
+
+<div class="content-3">
+                    <h2>Portfolio</h2>
                         <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother\'s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
 						<h3>Examples</h3>
 						<p>Now that we know who you are, I know who I am. I\'m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain\'s going to be? He\'s the exact opposite of the hero. And most times they\'re friends, like you and me! I should\'ve known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
