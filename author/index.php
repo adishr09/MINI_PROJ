@@ -1,3 +1,4 @@
+
 <?php echo'   
 		<link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="author/css/demo.css" />
@@ -41,23 +42,27 @@
 				    </div>
 			        <div class="content-2">
 						<h2>Submit Manuscript</h2>
-                        <form id=\'register\' action=\'register.php\' method=\'post\' accept-charset=\'UTF-8\'>
-							<legend>Register</legend>
+                        
+						<form id=\'register\' action=\'validate.php\'  method=\'post\' accept-charset=\'UTF-8\'>
+							<legend><b>Register</b></legend>
+							<fieldset>
       
+							
+							
 							<label>
-							Full Name  *
-							<input type=\'text\' name=\'name\' id=\'name\' maxlength="50" /> 
-							</label>
+							Full Name  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type=\'text\' name=\'name\' id=\'name\' value=\'<?php echo $valid_name; ?> \' maxlength="50" /> 
+							</label><br><br>
 	   
 							<label>
-							Email Address  *
+							Email Address  * &nbsp;&nbsp;&nbsp;
 							<input type=\'text\' name=\'email\' id=\'email\' maxlength="50" /> 
-							</label>
+							</label><br><br>
 
 							  <label>
-							   Contact No.*
+							   Contact No.* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<input type=\'text\' name=\'username\' id=\'username\' maxlength="50" /> 
-							  </label> 
+							  </label><br><br>
 							  
 							  <label>
 								Subject Category*:
@@ -67,32 +72,39 @@
 								 <option value="sub3">s3</option>
 								 <option value="sub4">s4</option>
 								  </select>
-							  </label>
+							  </label><br><br>
 							  
 							  <label>
-								Paper Type*:
-								 <input type=\'password\' name=\'password\' id=\'password\' maxlength="50" /> 
-							  </label>
+								Paper Type*: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								 <input type=\'text\' name=\'paper\' id=\'paper\' maxlength="50" /> 
+							  </label><br><br>
 
 							  
 							  <label> 
-							   Gender*:      
+							   Gender*:<br>      
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<input type="radio" name="sex" value="male"> M
-								<br><br><br>
+								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<input type="radio" name="sex" value="female"> F
-							  </label>
+							  </label><br><br>
 							  
 							  <label>
 								Abstract*:
 								 <textarea rows="4" cols="50">
 								  </textarea>		 
-							  </label>
+							  </label><br><br>
 
 							  <input type=\'hidden\' name=\'submitted\' id=\'submitted\' value=\'1\' class="form_input"/>
 							  
 							  
-							  <input type=\'submit\' name=\'Submit\' value=\'Submit\' />
+							  <input type=\'submit\' name=\'Submit\' class=\'button\' value=\'Submit\' />
 							  </form>
+					
+                           
+							  					
+					
+					
+					
 					</div>
 			        <div class="content-3">
 						<h2>Portfolio</h2>
