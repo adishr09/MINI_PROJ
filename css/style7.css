@@ -99,7 +99,7 @@
 }
 
 .overlay-contentpush {
-	background: rgba(153,204,51,1);
+	background: rgba(240, 240, 240, 1);
 	visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;

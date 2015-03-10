@@ -1,63 +1,34 @@
 <?php echo'
 		
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="Nav_Bar/css/default.css" />
-		<link rel="stylesheet" type="text/css" href="Nav_Bar/css/component.css" />
-		<script src="Nav_Bar/js/modernizr.custom.js"></script>
-		<div class="nav" style="background:rgba(236, 236, 236, 1);">
-			<ul id="cbp-tm-menu" class="cbp-tm-menu">
-				<li>
-					<a href="index.php">Home</a>
-				</li>
-				<li>
-					<a href="#">IEEE</a>
-					<ul class="cbp-tm-submenu">
-						<li><a href="about_ieee.php" class="cbp-tm-icon-archive">About IEEE</a></li>
-						<li><a href="join_ieee.php" class="cbp-tm-icon-cog">Why Join IEEE</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="hkn.php">IEEE-HKN</a>
-				</li>			
-				<li>
-					<a href="WIE.php">WIE</a>
-				</li>
-				<li>
-					<a href="#">Publications</a>
-					<ul class="cbp-tm-submenu">
-						<li><a href="http://pratibimb.bvpieee.org" class="cbp-tm-icon-archive">Pratibimb</a></li>
-						<li><a href="#" class="cbp-tm-icon-cog">Cognizance</a></li>
-						<li><a href="report.php" class="cbp-tm-icon-location">Reports</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Executive Committee</a>
-					<ul class="cbp-tm-submenu">
-						<li><a href="branch_couns.php" class="cbp-tm-icon-archive">Branch Counsellor</a></li>
-						<li><a href="team.php" class="cbp-tm-icon-cog">The BVPIEEE Team</a></li>
-					</ul>
-				</li>	
-				<li>
-					<a href="#">SIGs</a>
-					<ul class="cbp-tm-submenu">
-						<li><a href="Drishti.php" class="cbp-tm-icon-archive">Drishti</a></li>
-						<li><a href="Code_x.php" class="cbp-tm-icon-cog">Code-X</a></li>
-						<li><a href="Robotix_United.php" class="cbp-tm-icon-location">Robotix-United</a></li>
-						<li><a href="GAMMA.php" class="cbp-tm-icon-archive">GAMMA</a></li>
-						<li><a href="E-Cell.php" class="cbp-tm-icon-cog">E-Cell</a></li>
-						<li><a href="Quiz_Club.php" class="cbp-tm-icon-archive">BVCOE Quiz Club</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="gallery_home.php">Gallery</a>
-				</li>
-				<li>
-					<a href="contact_us.php">Contact Us</a>
-				</li>
-			</ul>
-		</div>
-		<script src="Nav_Bar/js/cbpTooltipMenu.min.js"></script>
-		<script>
-			var menu = new cbpTooltipMenu( document.getElementById( "cbp-tm-menu" ) );
-		</script>
+		<link rel="stylesheet" type="text/css" href="Nav_Bar/css/style.css" />
+		<center>
+		<ul id="nav1">
+			<li><a href="index.php">Home</a></li>
+			<li><a href="#">About ARISTIDE</a>
+				<ul>
+					<li><a href="mission_vision.html">MISSION & VISION</a></li>
+					<li><a href="editorial_board.html">EDITORIAL BOARD</a></li>
+					<li><a href="advisory_board.html">ADVISORY BOARD</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Installation</a>
+				<ul>
+					<li><a href="call_for_papers.html">LEAFLET</a></li>
+					<li><a href="current_issue.html">CURRENT ISSUE</a></li>
+					<li><a href="submit_manuscript_c.html">SUBMIT MANUSCRIPT</a></li>
+				</ul>
+			</li>
+			<li><a href="#">News</a>
+			</li>
+			<li class="current"><a href="#">Users</a>
+			</li>
+			<li><a href="#">Licenses</a>
+				
+			</li>
+			<li><a href="#">Testimonials</a>
+			</li>
+			<li><a href="contact_us.html">FAQs</a></li>
+			<li><a href="contact_us.html">Contact Us</a></li>
+		</ul>
+		</center>
 	'	;?>
