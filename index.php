@@ -63,7 +63,7 @@
 			<li>	generation of conference broshures with program</li>
 			<li>	conference program and proceedings on flash drives</li>
 			</ol>
-		</div>ACM
+		</div>
 	</div>
 	<script>
 	function overlay(){
