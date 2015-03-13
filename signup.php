@@ -37,7 +37,7 @@ $q_run=mysql_query($q) or die("<br/>error_run");
 echo '<br>'.$q_row['uname']; 
 $uname=$q_row['uname'];
 $end = $q_row['done'];
-if($uname==$u && as$end == 0 ){$_SESSION['uname']=$u;*/
+if($uname==$u && $end == 0 ){$_SESSION['uname']=$u;*/
 
 /*}
 else if ($end != 0 ){header( 'Location: end.php' ) ;}
