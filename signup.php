@@ -53,15 +53,15 @@ mysql_connect('localhost', 'root', '') or die("<br/>error");
 mysql_connect('localhost', 'root','') or die("<br/>error");
 mysql_select_db('delhibvce') or die("<br>DB_error");
 $q_run=mysql_query($q) or die("<br/>error_run");
-/*$q_row=mysql_fetch_assoc($q_run);
+$q_row=mysql_fetch_assoc($q_run);
 echo '<br>'.$q_row['uname']; 
 $uname=$q_row['uname'];
 $end = $q_row['done'];
-if($uname==$u && $end == 0 ){$_SESSION['uname']=$u;*/
+if($uname==$u && $end == 0 ){$_SESSION['uname']=$u;
 
-/*}
+}
 else if ($end != 0 ){header( 'Location: end.php' ) ;}
-}*/
+}
  $core ->addAddress($q_row['email_id'],$fname);
     $core ->Subject = 'Your id is created at Artistde CMS';
     $core ->Body = 'Hi, This is to inform that your id has been created at Aristide CMS. Following are your credentials
@@ -77,5 +77,5 @@ else {
     echo $core ->ErrorInfo;
 }
  
- }
+ 
 ?>

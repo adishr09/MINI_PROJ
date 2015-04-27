@@ -49,7 +49,7 @@
 			        <div class="content-2">
 						<h2>Submit Manuscript</h2>
                         
-						<form id=\'register\' action=\'author/validate.php\'  method=\'post\' accept-charset=\'UTF-8\'>
+						<form id=\'register\' action=\'author/upload.php\'  method=\'post\' accept-charset=\'UTF-8\'>
 							<fieldset>
 							<table>
 							<tr><td>  
@@ -60,7 +60,7 @@
 							  <tr><td> 
 							  <label>
 								Subject Category
-								 </td><td><select>
+								 </td><td><select name=\'category\'>
 								 <option value="Sub1">s1</option>
 								 <option value="sub2">s2</option>
 								 <option value="sub3">s3</option>
@@ -77,7 +77,7 @@
 							  <tr><td> 
 							  <label>
 								Abstract
-								 </td><td><textarea rows="4" cols="50">
+								 </td><td><textarea name=\'abstract\' rows="4" cols="50">
 								  </textarea>		 
 							  </label></td></tr>
 
@@ -101,4 +101,6 @@
 		        </div>
 			</section>
         </div>
-    </body>';?>
+    </body>
+	';
+?>
