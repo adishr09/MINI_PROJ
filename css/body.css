@@ -22,7 +22,7 @@ logo-index{
 	display:inline;
 	position:relative;
 	float:left;
-	width:99.2%;
+	width:100%;
 	height:4%;
 	text-align:right;
 	padding:0px;
@@ -42,12 +42,10 @@ logo-index{
 .nav_bar{
 	display:inline-block;
 	position:relative;
-	font-size:17px;
 	float:left;
 	z-index:100;
 	width:100%;
 	height:7%;
-	background-color:rgba(110, 110, 110, 1);	
 }
 
 .content_lol{
@@ -56,12 +54,20 @@ logo-index{
 	float:left;
 	margin:5% 5%;
 	width:90%;
+<<<<<<< HEAD
 	border:rgba(0, 0, 0, 0) solid 20px;
 	border-radius:10px;
 	<?--height:100%;
 	<?--border:2px solid grey;
 	<?--padding:2%;
 	background-color:rgba(0,0,0,0.1);	
+=======
+	height:100%;
+	border:9px double black;
+	padding:2%;
+	box-shadow:rgb(52,52,52) 12px 12px;
+	background-color:rgba(0,0,0,0.1);
+>>>>>>> origin/master
 }
 
 .left{
