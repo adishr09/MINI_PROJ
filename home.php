@@ -1,4 +1,14 @@
-<?php session_start(); ?>
+<?php session_start();
+	$lolwa = $_POST['done'];
+	switch($lolwa)
+	{
+		case 0: echo ' Submission Failed';
+			break;
+		case 1:echo ' Submission Succesful';
+			break;
+		case 2: break;
+	}
+ ?>
 <html>
 <head>
 	<title>Aristdie - CMS </title>

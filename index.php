@@ -7,28 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style7.css" />
 	<script src="js/modernizr.custom.js"></script>
 </head>
-<?php
-	session_start();
-	if(isset($_POST['user']) && isset($_POST['pass']))
-	{
-		mysql_connect('mysql1.freehosting.com', 'bvpieeec_lol', 'hdb32wb98') or die("<br/>error");
-		mysql_select_db('bvpieeec_delhibvce') or die("<br>DB_error");
-		$u=$_POST['user'];
-		$p=$_POST['pass'];
-	
-		$q="SELECT * FROM `vsq_15` WHERE pass='".$p."'";
-		
-		$q_run=mysql_query($q) or die("<br/>error_run");
-		$q_row=mysql_fetch_assoc($q_run);
-		echo '<br>'.$q_row['uname']; 
-		$uname=$q_row['uname'];
-		$end=$q_row['done_2'];
-		if($uname==$u && $end==0){$_SESSION['uname']=$u; 
-		header( 'Location: quiz/index.php' ) ;
-		}
-		else if ($end != 0 ){header( 'Location: exit.php' ) ;}
-		}
-?>
 <body>
 	<div class="container">
 		<div class="top_bar" style="height: 31px">

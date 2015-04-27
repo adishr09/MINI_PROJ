@@ -33,7 +33,7 @@ switch($cars)
       echo "2";
          $q="SELECT * FROM `art_reviewer` WHERE email_id='".$log_email."'"; break;
 }     
- 
+$_SESSION['done']=2;
 $_SESSION['cars']=$cars; 
 mysql_connect('localhost', 'root', '') or die("<br/>error");
 mysql_select_db('project') or die("<br>DB_error");

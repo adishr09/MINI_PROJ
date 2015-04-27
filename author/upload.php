@@ -1,8 +1,5 @@
 <?php
-
 session_start();
-	
-
 /*$file = $_FILES['name'];*/
 $subject_category = $_POST['category'];
 $paper_type = $_POST['paper'];
@@ -13,5 +10,6 @@ mysql_select_db('delhibvce') or die("<br>DB_error");
 echo $q;
 $q_run=mysql_query($q) or die("<br/>error_run");
 $q_row=mysql_fetch_assoc($q_run);
-
+$_SESSION['done']=1;
+header('Location:../home.php');
 ?>
