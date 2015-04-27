@@ -18,32 +18,33 @@ $core ->FromName = 'Aristide CMS';
 
 if(isset($_POST['sign_email']) && isset($_POST['sign_pass']))
 {
-$sign_email=$_POST['sign_email'];
-$sign_pass=md5($_POST['sign_pass']);
-$fname=$_POST['fname'];
-$mname=$_POST['mname'];
-$lname=$_POST['lname'];
-$contact_no=$_POST['contact_no'];
-$address=$_POST['address'];
-$country=$_POST['country'];
-$cars = $_POST['cars'];
+ $sign_email=$_POST['sign_email'];
+ $sign_pass=md5($_POST['sign_pass']);
+ $fname=$_POST['fname'];
+ $mname=$_POST['mname'];
+ $lname=$_POST['lname'];
+ $contact_no=$_POST['contact_no'];
+ $address=$_POST['address'];
+ $country=$_POST['country'];
+  $cars = $_POST['cars'];
 
  
 switch($cars)
     {
-      case "Author":
+      case "author":
       
-      $q="INSERT INTO `art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`) VALUES (NULL, '".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$contact_no."', '".$address."', '".$country."');
-";
+      $q="INSERT INTO `delhibvce`.`art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`)    VALUES (NULL, '".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$contact_no."', '".$address."', '".$country."');";
+
+         
  break;
  
-      case "Reviewer": 
+      case "reviewer": 
      
-      $q ="INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `contact_no`, `rev_id`) VALUES ('".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$address."', '".$country."', NULL, NULL, '".$contact_no."', NULL);" ;
+      $q ="INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `contact_no`, `rev_id`) VALUES ('".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$address."', '".$country."', NULL,NULL, '".$contact_no."', NULL);" ;
  break;
 }      
      
-
+echo $q;
 mysql_connect('localhost', 'root', '') or die("<br/>error");
 mysql_select_db('delhibvce') or die("<br>DB_error");
 $q_run=mysql_query($q) or die("<br/>error_run");
@@ -70,6 +71,6 @@ if($core->send()) {
 else {
     echo $core ->ErrorInfo;
 }
-header( 'Location: home.php' ) ; 
+ 
  }
 ?>
