@@ -15,7 +15,7 @@ $core -> SMTPSecure = 'ssl';
 $core -> Port = 465;
 $core ->From = 'noreply-aristide@gmail.com';
 $core ->FromName = 'Aristide CMS';
-
+$errors = ' noerror';
  if(empty($_POST) === false){
   $required_fields= array ('fname','lname','sign_email','sign_pass','contact_no','address','country');
    foreach($_POST as $key=>$value){
@@ -41,13 +41,13 @@ $core ->FromName = 'Aristide CMS';
 	 {$errors[]= 'Provide a valid contact No.';
      } 
 	 
-	 }
+   } 
    }
  print_r($errors);
 
- if(isset($_POST['sign _email']) && isset($_POST['sign_pass']))
+ if(isset($_POST['sign _email']) || isset($_POST['sign_pass']))
 {
- $sign_email=$_POST['sign_email'];
+$sign_email=$_POST['sign_email'];
  $sign_pass=md5($_POST['sign_pass']);
  $fname=$_POST['fname'];
  $mname=$_POST['mname'];
@@ -60,22 +60,13 @@ $core ->FromName = 'Aristide CMS';
  switch($cars)
     {
       case "author":
-      
-
       $q="INSERT INTO `delhibvce`.`art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`)    VALUES (NULL, '".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$contact_no."', '".$address."', '".$country."');";
-
-         
-      $q="INSERT INTO `delhibvce`.`art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`) VALUES (NULL, '".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$contact_no."', '".$address."', '".$country."');
-";
- break;
- 
-      case "reviewer": 
+		break;
+       case "reviewer": 
+       $q ="INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `contact_no`, `rev_id`) VALUES ('".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$address."', '".$country."', NULL,NULL, '".$contact_no."', NULL);" ;
+		break;
+	}      
      
-      $q ="INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `contact_no`, `rev_id`) VALUES ('".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$address."', '".$country."', NULL,NULL, '".$contact_no."', NULL);" ;
- break;
-}      
-     
-echo $q;
 mysql_connect('localhost', 'root', '') or die("<br/>error");
 
 mysql_connect('localhost', 'root','') or die("<br/>error");

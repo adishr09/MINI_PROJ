@@ -24,20 +24,22 @@ $cars = $_POST['cars'];
 $tem = md5($log_pass);
 switch($cars)
     {
-      case "Author":
+      case "author":
       echo "1";
       $q="SELECT * FROM `art_author` WHERE email_id='".$log_email."'";
  break;
  
-      case "Reviewer": 
+      case "reviewer": 
       echo "2";
          $q="SELECT * FROM `art_reviewer` WHERE email_id='".$log_email."'"; break;
+	default: echo "3";
+	break;
 }     
-$_SESSION['done']=2;
 $_SESSION['cars']=$cars; 
 mysql_connect('localhost', 'root', '') or die("<br/>error");
-mysql_select_db('project') or die("<br>DB_error");
+mysql_select_db('delhibvce') or die("<br>DB_error");
 $q_run=mysql_query($q) or die("<br/>error_run");
+$_SESSION['done']=2;
 $q_row=mysql_fetch_assoc($q_run);
 print_r( $q_row);
 if(strcmp('',$q_row))

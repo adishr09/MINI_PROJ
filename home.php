@@ -1,5 +1,5 @@
 <?php session_start();
-	$lolwa = $_POST['done'];
+	$lolwa = $_SESSION['done'];
 	switch($lolwa)
 	{
 		case 0: echo ' Submission Failed';
@@ -22,6 +22,7 @@
 			echo "Logged In: ". $_POST["log_email"];
 	?>
 	</section>
+	<section>
 	</div>
 	<div class="logo-home">
 			<div style="float: center;
