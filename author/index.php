@@ -54,12 +54,12 @@
 							<table>
 							<tr><td>  
 							  <label>
-							   File Name:
+							   File Name
 								</td><td><input type=\'file\' name=\'username\' id=\'username\' maxlength="50" /> 
 							  </label></td></tr>
 							  <tr><td> 
 							  <label>
-								Subject Category:
+								Subject Category
 								 </td><td><select>
 								 <option value="Sub1">s1</option>
 								 <option value="sub2">s2</option>
@@ -69,14 +69,14 @@
 							  </label></td></tr>
 							  <tr><td> 
 							  <label>
-								Paper Type:
+								Paper Type
 								 </td><td><input type=\'text\' name=\'paper\' id=\'paper\' maxlength="50" /> 
 							  </label></td></tr>
 
 							  
 							  <tr><td> 
 							  <label>
-								Abstract:
+								Abstract
 								 </td><td><textarea rows="4" cols="50">
 								  </textarea>		 
 							  </label></td></tr>

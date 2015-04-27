@@ -47,14 +47,14 @@
                         <table>                
                         <tr><td>
 							<label>
-						    Reviewer Id*</td><td>
+						    Reviewer Id</td><td>
 							<input type=\'text\' name=\'rev_id\' id=\'rev_id\' maxlength="50" /> 
 							</label>
                             </td></tr>
                         
                         <tr><td>
 							<label>
-								Subject Category*</td><td>
+								Subject Category</td><td>
 								 <select>
                                  <option value="res1">s1</option>
 								 <option value="res2">s2</option>
@@ -66,21 +66,21 @@
                         
                         <tr><td>
                             <label>
-                                Paper Id*</td><td>
+                                Paper Id</td><td>
 								 <input type=\'paper_id\' name=\'papid\' id=\'papid\' maxlength="50" /> 
                             </label>
                             </tr></td>
                         
                         <tr><td>
 							<label>
-								Paper Type*</td><td>
+								Paper Type</td><td>
 								 <input type=\'password\' name=\'password\' id=\'password\' maxlength="50" /> 
 							</label>
                             </tr></td>
 						
                         <tr><td>
                             <label>
-								Response* (In words)</td><td>
+								Response(In words)</td><td>
 								 <textarea rows="4" cols="50">
 								 </textarea>		 
 							</label>
@@ -88,7 +88,7 @@
                         
                         <tr><td>
 							<label>
-								Response*</td><td>
+								Response</td><td>
                                 <select>
 								 <option value="Sub1">Rejected</option>
 								 <option value="sub2">Accepted</option>
