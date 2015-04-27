@@ -68,7 +68,7 @@ $core ->AltBody= $abst;
 
 if($core->send()) {
     echo 'EMail sent';
-  header( 'Location: home.php' ) ;
+  header( 'Location: index.php' ) ;
 }
 else {
     echo $core ->ErrorInfo;
