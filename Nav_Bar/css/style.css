@@ -1,8 +1,22 @@
+@font-face {
+    font-family: 'arsenalregular';
+    src: url('../fonts/arsenal-regular-webfont.eot');
+    src: url('../fonts/arsenal-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arsenal-regular-webfont.woff') format('woff'),
+         url('../fonts/arsenal-regular-webfont.ttf') format('truetype'),
+         url('../fonts/arsenal-regular-webfont.svg#arsenalregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 #nav1 {
 	margin: 1% 0;
 	padding: 7px 0 0 0;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(90, 161, 161, 1)), color-stop(98%,rgba(84, 151, 150, 1)));
 	line-height: 100%;
+	font-family: 'arsenalregular';
+	font-size:15;
 	z-index:1000;
 	width:100%;
 }
