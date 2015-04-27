@@ -53,7 +53,7 @@
                         <tr><td>
 							<label>
 								Subject Category</td><td>
-								 <select>
+								 <select name=\'category\'>
                                  <option value="res1">s1</option>
 								 <option value="res2">s2</option>
 								 <option value="res3">s3</option>
@@ -72,14 +72,14 @@
                         <tr><td>
 							<label>
 								Paper Type</td><td>
-								 <input type=\'password\' name=\'password\' id=\'password\' maxlength="50" /> 
+								 <input type=\'text\' name=\'password\' id=\'password\' maxlength="50" /> 
 							</label>
                             </tr></td>
 						
                         <tr><td>
                             <label>
 								Response(In words)</td><td>
-								 <textarea rows="4" cols="50">
+								 <textarea name=\'response_words\' rows="4" cols="50">
 								 </textarea>		 
 							</label>
                             </tr></td>
@@ -87,7 +87,7 @@
                         <tr><td>
 							<label>
 								Response</td><td>
-                                <select>
+                                <select name=\'response_opt\'>
 								 <option value="Sub1">Rejected</option>
 								 <option value="sub2">Accepted</option>
 								 <option value="sub3">Acepted with Minor Corrections</option>
