@@ -7,7 +7,10 @@
 	<div class="top_bar">
 	</div>
 	<div class="logo-home">
-			<div><img src="/MINI_PROJ/img/logo.png" alt="LOGO" width="460px" style="margin-top:2%;">
+			<div style="float: center;
+  position: relative;
+  display: inline-block;
+  margin: 2%;"><img src="/MINI_PROJ/img/logo.png" alt="LOGO" width="460px">
 			</div>
 	</div>
 	<div class="nav_bar">

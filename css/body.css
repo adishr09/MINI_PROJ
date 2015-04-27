@@ -54,11 +54,20 @@ logo-index{
 	float:left;
 	margin:5% 5%;
 	width:90%;
+<<<<<<< HEAD
+	border:rgba(0, 0, 0, 0) solid 20px;
+	border-radius:10px;
+	<?--height:100%;
+	<?--border:2px solid grey;
+	<?--padding:2%;
+	background-color:rgba(0,0,0,0.1);	
+=======
 	height:100%;
 	border:9px double black;
 	padding:2%;
 	box-shadow:rgb(52,52,52) 12px 12px;
 	background-color:rgba(0,0,0,0.1);
+>>>>>>> origin/master
 }
 
 .left{

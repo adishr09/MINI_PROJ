@@ -37,32 +37,32 @@
 			</section>
 		</div>
 		<div class="logo_bar">
-			<div class="logo-index"><img src="/MINI_PROJ/img/logo.png" alt="LOGO" width="460px" style="margin-top:2%;"></div>
+			<div style="float: center; position: relative; display: inline-block; margin: 2%;"><img src="/MINI_PROJ/img/logo.png" alt="LOGO" width="460px" style="margin-top:1% 2% 2% 2%;"></div>
 		</div>
 		<div class="nav_bar">
 			<?php include("Nav_Bar/nav_bar.php");?>
 		</div>
 		<div class="content_lol">
 			<h2>ARISTIDE</h2>
-			<p>ARISTIDE is a conference management system that is flexible, easy to use, and has many features to make it suitable for various conference models. It is currently probably the most commonly used conference management system.</p><br>
-			<h3>What ARISTIDE Helps You to Do</h3>
-			<p>EasyChair was designed to help conference organisers to cope with the complexity of the refereeing process. The current version supports</p>
-			<ol>
-			<li>management and monitoring of the program committee;</li>
-			<li>	sophisticated and flexible management of the access of PC members and referees to papers and conflicts of interests;</li>
-			<li>	automatic paper submission;</li>
-			<li>	paper assignment based on the preferences of PC members;</li>
-			<li>	list of the latest events;</li>
-			<li>	submission of reviews;</li>
-			<li>	sending email to PC members, referees and authors;</li>
-			<li>	monitoring email;</li>
-			<li>	online discussion of papers;</li>
-			<li>	the author response (aka rebuttal) phase, when the author can respond to the reviews;</li>
-			<li>	preparation of conference proceedings</li>
-			<li>	generation and publishing of conference program</li>
-			<li>	generation of conference broshures with program</li>
-			<li>	conference program and proceedings on flash drives</li>
-			</ol>
+			<p>ARISTIDE is a conference management system that is flexible, easy to use, and has many features to make it suitable for various conference models.</p><br>
+			<h3>What ARISTIDE Helps You Do</h3>
+			<p>ARISTIDE was designed to help conference organisers to cope with the complexity of the refereeing process. The current version supports</p>
+			<ul>
+			<li>	Management and monitoring of the program committee</li>
+			<li>	Sophisticated and flexible management of the access of PC members and referees to papers and conflicts of interests</li>
+			<li>	Automatic paper submission</li>
+			<li>	Paper assignment based on the preferences of PC members</li>
+			<li>	List of the latest events</li>
+			<li>	Submission of reviews</li>
+			<li>	Sending email to PC members, referees and authors</li>
+			<li>	Monitoring email</li>
+			<li>	Online discussion of papers</li>
+			<li>	The author response (aka rebuttal) phase, when the author can respond to the reviews</li>
+			<li>	Preparation of conference proceedings</li>
+			<li>	Generation and publishing of conference program</li>
+			<li>	Generation of conference broshures with program</li>
+			<li>	Conference program and proceedings on flash drives</li>
+			</ul>
 		</div>
 	</div>
 	<script>
