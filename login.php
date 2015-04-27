@@ -57,7 +57,26 @@ if(strcmp($tem,$q_row['pass']) ){
     $core ->Subject = 'You just logged in ';
     $core ->Body = 'Hi, This is to inform that someone just logged into your email account. <br>
     <h1>This is an auto generated mail please dont reply</h1>'; 
-   header( 'Location: home.php' ) ;
+   switch($cars)
+    {
+      case "Author":
+      echo "1";
+       header( 'Location: /author/index.php' ) ;
+ break;
+ 
+      case "Reviewer": 
+      echo "2";
+         header( 'Location: /reviewer/index.php'  ) ; break;
+        }      
+        
+if($core->send()) {
+    echo 'EMail sent';
+  header( 'Location: home.php' ) ;
+}
+else {
+    echo $core ->ErrorInfo;
+}
+  
 }
 else {header( 'Location: error.php' ) ;}
 }
