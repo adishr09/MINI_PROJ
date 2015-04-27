@@ -6,8 +6,9 @@
 <body>
 	<div class="top_bar">
 	</div>
-	<div class="logo_bar">
-	<p> LOGO </p>
+	<div class="logo-home">
+			<div><img src="/MINI_PROJ/img/logo.png" alt="LOGO" width="460px" style="margin-top:2%;">
+			</div>
 	</div>
 	<div class="nav_bar">
 		<?php include("Nav_Bar/nav_bar.php");?>

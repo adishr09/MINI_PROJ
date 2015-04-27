@@ -7,6 +7,17 @@ body{
 	margin:0;
 }
 
+logo-index{
+}
+
+.logo-home{
+	display:inline-block;
+	position:relative;
+	float:left;
+	width:100%;
+	height:11%;
+}
+
 .top_bar{
 	display:inline;
 	position:relative;
