@@ -7,9 +7,9 @@
 </head>
 <body>
 	<div class="top_bar" style="height:31px">
-	<section>
+	<section style="padding: 2 8 2 2; color:white;">
 	<?php
-			echo "Logged In: ". $_POST["fname"];
+			echo "Logged In: ". $_POST["log_email"];
 	?>
 	</section>
 	</div>
@@ -24,7 +24,19 @@
 		<?php include("Nav_Bar/nav_bar.php");?>
 	</div>
 	<div class="content_lol">
-		<?php include("author/index.php");?> 
+		<?php 
+		$lol=$_POST['cars'];
+		echo $lol;
+		switch($lol)
+    {
+      case "author":
+      require("/author/index.php");
+ break;
+ 
+      case "reviewer": 
+      require("/reviewer/index.php");
+	break;}
+	  ?> 
 	</div></div>
 </body>
 </html>
