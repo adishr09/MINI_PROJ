@@ -24,7 +24,19 @@
 		<?php include("Nav_Bar/nav_bar.php");?>
 	</div>
 	<div class="content_lol">
-		<?php include("author/index.php");?> 
+		<?php 
+		$lol=$_POST['cars'];
+		echo $lol;
+		switch($lol)
+    {
+      case "author":
+      require("/author/index.php");
+ break;
+ 
+      case "reviewer": 
+      require("/reviewer/index.php");
+	break;}
+	  ?> 
 	</div></div>
 </body>
 </html>
