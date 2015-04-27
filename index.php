@@ -31,7 +31,7 @@
 ?>
 <body>
 	<div class="container">
-		<div class="top_bar">
+		<div class="top_bar" style="height: 31px">
 			<section>
 				<button id="trigger-overlay" type="button">Login / Sign-Up</button>
 			</section>

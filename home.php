@@ -5,7 +5,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="top_bar">
+	<div class="top_bar" style="height:31px">
 	</div>
 	<div class="logo-home">
 			<div style="float: center;
@@ -19,6 +19,6 @@
 	</div>
 	<div class="content_lol">
 		<?php include("author/index.php");?> 
-	</div>
+	</div></div>
 </body>
 </html>
