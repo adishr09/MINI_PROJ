@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 	<title>Aristdie - CMS </title>
@@ -6,6 +7,11 @@
 </head>
 <body>
 	<div class="top_bar" style="height:31px">
+	<section>
+	<?php
+			echo "Welcome ". $_POST["log_email"];
+	?>
+	</section>
 	</div>
 	<div class="logo-home">
 			<div style="float: center;
