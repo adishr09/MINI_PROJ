@@ -16,7 +16,36 @@ $core -> Port = 465;
 $core ->From = 'noreply-aristide@gmail.com';
 $core ->FromName = 'Aristide CMS';
 
-if(isset($_POST['sign_email']) && isset($_POST['sign_pass']))
+ if(empty($_POST) === false){
+  $required_fields= array ('fname','lname','sign_email','sign_pass','contact_no','address','country');
+   foreach($_POST as $key=>$value){
+    
+	if(empty($value) && in_array($key,$required_fields) === true )
+     {$errors[]= 'fields are not filled';
+      break 1;
+     } 
+	 
+	 if(strlen($_POST['sign_pass']) <5)
+	 {$errors[]= 'Minimum length of password should be 6 charachters';
+     } 
+	  
+	 if(preg_match("/\\s/",$_POST['fname']) == true )
+	 {$errors[]= 'No space in the name should be present';	  
+	 }
+	 
+	 if (filter_var($_POST['sign_email'], FILTER_VALIDATE_EMAIL) === false){
+	 $errors[]= ' Provide valid email address';
+	 }
+	 
+	 if(strlen($_POST['contact_no']) <10)
+	 {$errors[]= 'Provide a valid contact No.';
+     } 
+	 
+	 }
+   }
+ print_r($errors);
+
+ if(isset($_POST['sign _email']) && isset($_POST['sign_pass']))
 {
  $sign_email=$_POST['sign_email'];
  $sign_pass=md5($_POST['sign_pass']);
@@ -28,8 +57,7 @@ if(isset($_POST['sign_email']) && isset($_POST['sign_pass']))
  $country=$_POST['country'];
   $cars = $_POST['cars'];
 
- 
-switch($cars)
+ switch($cars)
     {
       case "author":
       
