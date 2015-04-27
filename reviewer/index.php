@@ -43,18 +43,18 @@
 			        <div class="content-2">
 						<h2>Response</h2>
                         <form id=\'response\' action=\'response.php\' method=\'post\' accept-charset=\'UTF-8\'>
-						<legend>Response</legend>
+						<fieldset>
                         <table>                
                         <tr><td>
 							<label>
-						    Reviewer Id  *
+						    Reviewer Id*</td><td>
 							<input type=\'text\' name=\'rev_id\' id=\'rev_id\' maxlength="50" /> 
 							</label>
                             </td></tr>
                         
                         <tr><td>
 							<label>
-								Subject Category*:
+								Subject Category*</td><td>
 								 <select>
                                  <option value="res1">s1</option>
 								 <option value="res2">s2</option>
@@ -66,21 +66,21 @@
                         
                         <tr><td>
                             <label>
-                                Paper Id*:
+                                Paper Id*</td><td>
 								 <input type=\'paper_id\' name=\'papid\' id=\'papid\' maxlength="50" /> 
                             </label>
                             </tr></td>
                         
                         <tr><td>
 							<label>
-								Paper Type*:
+								Paper Type*</td><td>
 								 <input type=\'password\' name=\'password\' id=\'password\' maxlength="50" /> 
 							</label>
                             </tr></td>
 						
                         <tr><td>
                             <label>
-								Response(In Words)*:
+								Response* (In words)</td><td>
 								 <textarea rows="4" cols="50">
 								 </textarea>		 
 							</label>
@@ -88,7 +88,7 @@
                         
                         <tr><td>
 							<label>
-								Response*:
+								Response*</td><td>
                                 <select>
 								 <option value="Sub1">Rejected</option>
 								 <option value="sub2">Accepted</option>
@@ -98,9 +98,8 @@
                             </tr></td>
                         
                         <tr><td>
-							<input type=\'hidden\' name=\'submitted\' id=\'submitted\' value=\'1\' class="form_input"/>
-                            <input type=\'submit\' name=\'Submit\' value=\'Submit\' />
-						    </tr></td>
+							<input type=\'submit\' name=\'Submit\' value=\'Submit\' />
+						    </td></tr>
                             </table>
                         </form>
 					</div>

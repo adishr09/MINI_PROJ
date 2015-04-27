@@ -28,14 +28,12 @@
 }
 
 .tabs .content-2 input {
-	position:absolute;
-	display:inline;
+	position:relative;
+	display:inline-block;
 	z-index: 1000;
 	width: 162px;
 	height: 40px;
 	opacity: 1;
-	margin-left:200px;
-	margin-bottom:20px;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
 }

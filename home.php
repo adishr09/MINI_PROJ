@@ -26,7 +26,7 @@
 	<div class="content_lol">
 		<?php 
 		$lol=$_POST['cars'];
-		echo $lol;
+		
 		switch($lol)
     {
       case "author":
