@@ -7,9 +7,9 @@
 </head>
 <body>
 	<div class="top_bar" style="height:31px">
-	<section>
+	<section style="padding: 2 8 2 2; color:white;">
 	<?php
-			echo "Logged In: ". $_POST["fname"];
+			echo "Logged In: ". $_POST["log_email"];
 	?>
 	</section>
 	</div>
