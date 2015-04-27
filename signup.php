@@ -33,14 +33,12 @@ switch($cars)
     {
       case "author":
       
-<<<<<<< HEAD
+
       $q="INSERT INTO `delhibvce`.`art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`)    VALUES (NULL, '".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$contact_no."', '".$address."', '".$country."');";
 
          
-=======
       $q="INSERT INTO `delhibvce`.`art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`) VALUES (NULL, '".$fname."', '".$mname."', '".$lname."', '".$sign_email."', '".$sign_pass."', '".$contact_no."', '".$address."', '".$country."');
 ";
->>>>>>> origin/master
  break;
  
       case "reviewer": 
@@ -49,13 +47,10 @@ switch($cars)
  break;
 }      
      
-<<<<<<< HEAD
 echo $q;
 mysql_connect('localhost', 'root', '') or die("<br/>error");
-=======
 
 mysql_connect('localhost', 'root','') or die("<br/>error");
->>>>>>> origin/master
 mysql_select_db('delhibvce') or die("<br>DB_error");
 $q_run=mysql_query($q) or die("<br/>error_run");
 /*$q_row=mysql_fetch_assoc($q_run);
