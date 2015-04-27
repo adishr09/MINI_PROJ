@@ -95,10 +95,8 @@
 					</div>
 
 				    <div class="content-4">
-						<h2>VIEW SUBBMISSIONS</h2>
-                        <TABLE>
-						
-						</TABLE>
+						<h2>VIEW SUBMISSIONS</h2>
+                        
 				    </div>
 		        </div>
 			</section>
