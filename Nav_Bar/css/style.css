@@ -1,10 +1,10 @@
 #nav1 {
-	margin: 0;
-	padding: 7px 0 0 10%;
+	margin: 1% 0;
+	padding: 7px 0 0 0;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(90, 161, 161, 1)), color-stop(98%,rgba(84, 151, 150, 1)));
 	line-height: 100%;
 	z-index:1000;
-	width:90%;
+	width:100%;
 }
 #nav1 li {
 	margin: 0 1.5%;
@@ -136,9 +136,6 @@
 	line-height: 0;
 	height: 0;
 }
-#nav1 {
-	display: inline-block;
-} 
 html[xmlns] #nav1 {
 	display: block;
 }

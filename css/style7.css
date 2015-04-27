@@ -99,7 +99,7 @@
 }
 
 .overlay-contentpush {
-	background: rgba(240, 240, 240, 1);
+	background-image:url('../author/images/bg.jpg');
 	visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -125,4 +125,11 @@
 	.overlay ul li {
 		min-height: 34px;
 	}
+}
+
+input{
+	border-radius: 6px;
+	margin:2px;
+	padding:1px;
+	background-color:rgba(252,252,252,0.5);
 }
