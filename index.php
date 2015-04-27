@@ -1,4 +1,4 @@
-<html style="overflow-x:hidden;">
+<html style="overflow-x:hidden; background-image:url('author/images/bg.jpg');" >
 <head>
 	<title>Aristdie - CMS </title>
 	<link rel="stylesheet" href="css/body.css" type="text/css">
