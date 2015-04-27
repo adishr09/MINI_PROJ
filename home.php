@@ -2,6 +2,7 @@
 <head>
 	<title>Aristdie - CMS </title>
 	<link rel="stylesheet" href="css/body.css" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="top_bar">

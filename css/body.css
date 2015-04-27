@@ -1,3 +1,8 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
 html{
 	color:#0e0e0e;
 	background-color:rgba(240,240,240,1);	
@@ -5,6 +10,7 @@ html{
 
 body{
 	margin:0;
+	font
 }
 
 logo-index{
@@ -52,7 +58,7 @@ logo-index{
 	display:inline-block;
 	position:relative;
 	float:left;
-	margin:5% 5%;
+	margin:3% 5%;
 	width:90%;
 <<<<<<< HEAD
 	border:rgba(0, 0, 0, 0) solid 20px;
@@ -63,9 +69,7 @@ logo-index{
 	background-color:rgba(0,0,0,0.1);	
 =======
 	height:100%;
-	border:9px double black;
 	padding:2%;
-	box-shadow:rgb(52,52,52) 12px 12px;
 	background-color:rgba(0,0,0,0.1);
 >>>>>>> origin/master
 }
@@ -77,8 +81,9 @@ logo-index{
 	width:35%;
 	height:70%;
 	padding:2%;
+	background-color:rgba(0, 0, 0, 0.16);
 	margin:7% 7%;
-	border:5px solid rgb(126, 126, 126);
+	border:5px solid rgb(87, 156, 156);
 	border-radius:15px;
 }
 
@@ -89,8 +94,9 @@ logo-index{
 	width:35%;
 	height:70%;
 	padding:2%;
+	background-color:rgba(0, 0, 0, 0.16);
+	border:5px solid rgb(87, 156, 156);
 	margin:7% 7%;
-	border:5px solid rgb(126, 126, 126);
 	border-radius:15px;
 }
 
