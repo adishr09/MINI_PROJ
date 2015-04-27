@@ -24,12 +24,12 @@ $cars = $_POST['cars'];
 $tem = md5($log_pass);
 switch($cars)
     {
-      case "author":
+      case "Author":
       echo "1";
       $q="SELECT * FROM `art_author` WHERE email_id='".$log_email."'";
  break;
  
-      case "reviewer": 
+      case "Reviewer": 
       echo "2";
          $q="SELECT * FROM `art_reviewer` WHERE email_id='".$log_email."'"; break;
 }      

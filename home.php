@@ -9,7 +9,7 @@
 	<div class="top_bar" style="height:31px">
 	<section>
 	<?php
-			echo "Welcome ". $_POST["log_email"];
+			echo "Logged In: ". $_POST["fname"];
 	?>
 	</section>
 	</div>
