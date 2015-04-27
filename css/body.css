@@ -56,6 +56,8 @@ logo-index{
 	float:left;
 	margin:5% 5%;
 	width:90%;
+	border:rgba(0, 0, 0, 0) solid 20px;
+	border-radius:10px;
 	<?--height:100%;
 	<?--border:2px solid grey;
 	<?--padding:2%;

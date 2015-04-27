@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+
 if(empty($_POST)==false){ 
   $required_fields = array('f_name','l_name','sign_email','sign_pass','contact_no','address','country');
   foreach($_POST as $key=> $value){
@@ -33,7 +36,6 @@ print_r($errors);
 
 
 
-/*session_start();
 
 if(isset($_POST['sign_email']) && isset($_POST['sign_pass']))
 {
@@ -87,6 +89,5 @@ if($uname==$u && $end == 0 ){$_SESSION['uname']=$u;
 else if ($end != 0 ){header( 'Location: end.php' ) ;}
 }
 header( 'Location: home.php' ) ; 
- }*/
+ }
 ?>
-
