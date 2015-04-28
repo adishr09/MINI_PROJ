@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.11
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2015 at 07:27 PM
--- Server version: 5.6.24
--- PHP Version: 5.6.8
+-- Generation Time: Apr 28, 2015 at 10:11 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -34,13 +34,20 @@ CREATE TABLE IF NOT EXISTS `art_reviewer` (
   `pass` varchar(30) NOT NULL,
   `address` varchar(200) NOT NULL,
   `country` varchar(30) NOT NULL,
-  `specialization` varchar(25) NOT NULL,
+  `specialization` varchar(100) DEFAULT NULL,
   `no_papers` int(10) DEFAULT NULL,
   `past_reviews` bigint(255) DEFAULT NULL,
-  `qualification` varchar(15) NOT NULL,
+  `qualification` int(255) DEFAULT NULL,
   `contact_no` int(100) DEFAULT NULL,
-  `rev_id` int(100) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+`rev_id` int(100) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `art_reviewer`
+--
+
+INSERT INTO `art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `past_reviews`, `qualification`, `contact_no`, `rev_id`) VALUES
+('', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, 3);
 
 --
 -- Indexes for dumped tables
@@ -50,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `art_reviewer` (
 -- Indexes for table `art_reviewer`
 --
 ALTER TABLE `art_reviewer`
-  ADD PRIMARY KEY (`rev_id`), ADD UNIQUE KEY `email` (`email_id`);
+ ADD PRIMARY KEY (`rev_id`), ADD UNIQUE KEY `email` (`email_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -60,7 +67,7 @@ ALTER TABLE `art_reviewer`
 -- AUTO_INCREMENT for table `art_reviewer`
 --
 ALTER TABLE `art_reviewer`
-  MODIFY `rev_id` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `rev_id` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
