@@ -2,7 +2,6 @@
 	
 session_start();
 require_once 'libs/PHPMailer/PHPMailerAutoload.php'; 
-echo 'Index this is';  
 $core = new PHPMailer();
 $core -> isSMTP();
 $core -> SMTPAuth = true;
@@ -71,30 +70,27 @@ mysql_connect('localhost', 'root', '') or die("<br/>error");
 
 mysql_connect('localhost', 'root','') or die("<br/>error");
 mysql_select_db('delhibvce') or die("<br>DB_error");
-$q_run=mysql_query($q) or die("<br/>error_run");
-$q_row=mysql_fetch_assoc($q_run);
-echo '<br>'.$q_row['uname']; 
-$uname=$q_row['uname'];
-$end = $q_row['done'];
-if($uname==$u && $end == 0 ){$_SESSION['uname']=$u;
-
-}
-else if ($end != 0 ){header( 'Location: end.php' ) ;}
-}
- $core ->addAddress($q_row['email_id'],$fname);
+$q_run=mysql_query($q) or die("error with signup please try different credentials" );
+echo $q_run;
+if ($q_run != "noerror"  ){
+	    echo $core ->ErrorInfo;
+		header( 'Location: error.php' ) ;}
+else{
+	 $core ->addAddress($sign_email,$fname);
     $core ->Subject = 'Your id is created at Artistde CMS';
     $core ->Body = 'Hi, This is to inform that your id has been created at Aristide CMS. Following are your credentials
     <br> Email :'+$sign_email+'<br> Password:'+$sign_pass+
  '
      <h1>This is an auto generated mail please dont reply</h1>'; 
-     
+     		header( 'Location: error.php' ) ;
+
 if($core->send()) {
     echo 'EMail sent';
   header( 'Location: home.php' ) ;
 }
-else {
-    echo $core ->ErrorInfo;
 }
+}
+
  
  
 ?>
