@@ -7,16 +7,16 @@ $core -> SMTPAuth = true;
 $core ->SMTPDebug = 1;
 
 $core -> Host = 'smtp.gmail.com';
-$core -> Username = 'priyansh.singh.delhi@gmail.com';
-$core -> Password = '9971486416';
+$core -> Username = 'ananttyagi2310@gmail.com';
+$core -> Password = '8860916560';
 $core -> SMTPSecure = 'ssl';
 $core -> Port = 465;
 
 
-$core ->From = 'priyansh.singh.delhi@gmail.com';
-$core ->FromName = 'PS';
-$core ->addReplyTo = ('priyansh.singh.delhi@gmail.com');
-$core ->addAddress('priyansh.singh.delhi@gmail.com', 'ps');
+$core ->From = 'ananttyagi2310@gmail@gmail.com';
+$core ->FromName = 'AT';
+$core ->addReplyTo = ('ananttyagi2310@gmail.com');
+$core ->addAddress('ananttyagi2310@gmail.com', 'ps');
 $core ->addAddress('adi.shr09@gmail.com', 'ps');
 $core ->addAddress('aristidecm@gmail.com', 'ps');
 
@@ -73,3 +73,4 @@ if($core->send()) {
 else {
     echo $core ->ErrorInfo;
 }
+?>
