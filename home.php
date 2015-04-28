@@ -1,14 +1,5 @@
 <?php session_start();
-	print_r ($_SESSION);
-	$lolwa = $_SESSION['done'];
-	switch($lolwa)
-	{
-		case 0: echo ' Submission Failed';
-			break;
-		case 1:echo ' Submission Succesful';
-			break;
-		case 2: break;
-	}
+	
  ?>
 <html>
 <head>
@@ -19,8 +10,10 @@
 <body>
 	<div class="top_bar" style="height:31px">
 	<section style="padding: 2 8 2 2; color:white;">
+	
 	<?php
-			echo "Logged In: ". $_POST["log_email"];
+	echo '<form action=\'logout.php\'><input type="submit" value="Logout"></form>';
+	echo "Logged In: ". $_SESSION['email'];
 	?>
 	</section>
 	<section>
@@ -37,12 +30,12 @@
 	</div>
 	<div class="content_lol">
 		<?php 
-		$lol=$_POST['cars'];
+		$lol=$_SESSION['cars'];
 		
 		switch($lol)
     {
       case "author":
-      require("auth_index.php");
+      require("/author/auth_index.php");
  break;
  
       case "reviewer": 
