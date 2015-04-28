@@ -1,3 +1,23 @@
+<?php 
+			    session_start();
+				$log_email=$_SESSION['email'];
+				echo $log_email."AAAAAAAA";
+				
+				$name= "SELECT first_name, middle_name, last_name FROM `art_reviewer` WHERE email_id=".$log_email";"
+				$email= $log_email;
+				$address= "SELECT address FROM `art_reviewer` WHERE email_id=".$log_email";"
+				$contact= "SELECT contact_no FROM `art_author` WHERE email_id=".$log_email";"
+				mysql_connect('localhost', 'root', '') or die("<br>error");
+				mysql_select_db('delhibvce') or die("<br>DB_error");
+				$name=mysql_query($name) or die("<br>error_run");
+				$addre=mysql_query($address) or die("<br>error_run");
+				$conta=mysql_query($contact) or die("<br>error_run");
+				echo $addre;
+				echo $conta;
+				?>
+
+ 
+
 <?php echo'   
 		<link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="reviewer/css/demo.css" />
@@ -38,10 +58,10 @@
 			        <div class="content-1">
 						<h2>Profile</h2>
                         <Table>
-						<tr><td><label>NAME:</label></td><td></td></tr>
-						<tr><td><label>E-MAIL:</label></td><td></td></tr>
-						<tr><td><label>ADDRESS:</label></td><td></td></tr>
-						<tr><td><label>CONTACT:</label></td><td></td></tr>
+						<tr><td><label>NAME:</label></td> <td><?php echo $name ?></td> </tr>
+						<tr><td><label>E-MAIL:</label></td> <td><?php echo $email ?></td> </tr>
+						<tr><td><label>ADDRESS:</label></td> <td><?php echo $addre ?></td> </tr>
+						<tr><td><label>CONTACT:</label></td> <td><?php echo $conta ?></td> </tr>
 						</TABLE>
 				    </div>
                     
@@ -90,7 +110,7 @@
                                 <select name=\'response_opt\'>
 								 <option value="Sub1">Rejected</option>
 								 <option value="sub2">Accepted</option>
-								 <option value="sub3">Acepted with Minor Corrections</option>
+								 <option value="sub3">Accepted with Minor Corrections</option>
 								</select>
 							</label>
                             </tr></td>

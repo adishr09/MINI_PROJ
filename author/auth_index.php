@@ -4,10 +4,10 @@
 				$log_email=$_SESSION['email'];
 				echo $log_email."AAAAAAAA";
 				/*
-				$name= "SELECT first_name, middle_name, last_name FROM `art_author` WHERE email_id=".$log_email;
+				$name= "SELECT first_name, middle_name, last_name FROM `art_author` WHERE email_id=".$log_email";"
 				$email= $log_email;
-				$address= "SELECT address FROM `art_author` WHERE email_id=".$log_email;
-				$contact= "SELECT contact_no FROM `art_author` WHERE email_id=".$log_email;
+				$address= "SELECT address FROM `art_author` WHERE email_id=".$log_email";"
+				$contact= "SELECT contact_no FROM `art_author` WHERE email_id=".$log_email";"
 			
 				mysql_connect('localhost', 'root', '') or die("<br/>error");
 				mysql_select_db('delhibvce') or die("<br>DB_error");
