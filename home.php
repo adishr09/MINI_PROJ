@@ -13,8 +13,8 @@
 	<section style="padding: 2 8 2 2; color:white;">
 	
 	<?php
-	echo '<form action=\'logout.php\'><input type="submit" value="Logout"></form>';
-	echo "Logged In: ". $_SESSION['email'];
+		echo "Logged In: ". $_SESSION['email'];
+		echo '<form action=\'logout.php\'><input type="submit" value="Logout"></form>';
 	?>
 	</section>
 	<section>

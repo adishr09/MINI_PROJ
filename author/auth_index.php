@@ -1,9 +1,6 @@
 
 				<?php 
-			    session_start();
-				$log_email=$_SESSION['email'];
-				echo $log_email."AAAAAAAA";
-				/*
+			    /*
 				$name= "SELECT first_name, middle_name, last_name FROM `art_author` WHERE email_id=".$log_email;
 				$email= $log_email;
 				$address= "SELECT address FROM `art_author` WHERE email_id=".$log_email;
