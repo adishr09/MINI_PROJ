@@ -52,7 +52,7 @@
 		<div class="overlay overlay-contentpush">
 			<button type="button" class="overlay-close">Close</button>
 			<div class="left">
-			<form action="home.php" method="POST" style="margin:0;">	
+			<form action="login.php" method="POST" style="margin:0;">	
 				<h1>Login</h1>
 				<p>User Type:</p>
 				<select name="cars">

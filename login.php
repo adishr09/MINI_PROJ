@@ -42,9 +42,7 @@ $q_run=mysql_query($q) or die("<br/>error_run");
 $_SESSION['done']=2;
 $q_row=mysql_fetch_assoc($q_run);
 print_r( $q_row);
-if(strcmp('',$q_row))
-header( 'Location: error.php' ) ;
-        
+			
 $fname=$q_row['first_name'];
 $lname=$q_row['last_name'];
 
@@ -54,27 +52,15 @@ if(strcmp($tem,$q_row['pass']) ){
     $_SESSION['contactno']=$q_row['contact_no'];
     $_SESSION['aut_id']=$q_row['aut_id'];
     
-    echo $_SESSION['fname'];
+    print_r($_SESSION);
     
     $core ->addAddress($q_row['email_id'], 'ps');
     $core ->Subject = 'You just logged in ';
     $core ->Body = 'Hi, This is to inform that someone just logged into your email account. <br>
     <h1>This is an auto generated mail please dont reply</h1>'; 
-   switch($cars)
-    {
-      case "Author":
-      echo "1";
-       header( 'Location: /author/index.php' ) ;
- break;
- 
-      case "Reviewer": 
-      echo "2";
-         header( 'Location: /reviewer/index.php'  ) ; break;
-        }      
         
 if($core->send()) {
     echo 'EMail sent';
-  header( 'Location: home.php' ) ;
 }
 else {
     echo $core ->ErrorInfo;
