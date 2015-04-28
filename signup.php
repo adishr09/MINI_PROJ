@@ -77,10 +77,25 @@
 		$core ->Body = 'Hi, This is to inform that your id has been created at Aristide CMS. Following are your credentials
 		<br> Email :'.$sign_email.'<br> Password:'.$sign_pass.'<br><br> <h1>This is an auto generated mail please dont reply</h1>'; 
 		
-		if($core->send()) {
-		echo 'Email sent';
+		if($core->send()) 
+			{
+				echo 'Email sent';
 			}
-			header( 'Location: index.php' ) 
+		switch ($cars) 
+			{
+				case "author": header( 'Location: index.php' );
+				break;
+			case "reviewer":
+				$m="SELECT * FROM `art_reviewer` WHERE email_id='".$sign_email."'"; 
+				 $_SESSION['aut_id']=$q_row['aut_id'];
+   
+				 mysql_connect('localhost', 'root', '') or die("<br/>error");
+				mysql_select_db('delhibvce') or die("<br>DB_error");
+				$q_run=mysql_query($m) or die("<br/>error_run");
+				$q_row=mysql_fetch_assoc($q_run);
+
+				header( 'Location: nextrev.php' ); break;
+			}
 		}
 	}
 

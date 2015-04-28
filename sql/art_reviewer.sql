@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2015 at 10:11 AM
+-- Generation Time: Apr 28, 2015 at 11:26 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -39,15 +39,16 @@ CREATE TABLE IF NOT EXISTS `art_reviewer` (
   `past_reviews` bigint(255) DEFAULT NULL,
   `qualification` int(255) DEFAULT NULL,
   `contact_no` int(100) DEFAULT NULL,
-`rev_id` int(100) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+`auth_id` int(100) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `art_reviewer`
 --
 
-INSERT INTO `art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `past_reviews`, `qualification`, `contact_no`, `rev_id`) VALUES
-('', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, 3);
+INSERT INTO `art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `past_reviews`, `qualification`, `contact_no`, `auth_id`) VALUES
+('', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, 3),
+('e', 'e', 'e', 'e@w.com', 'ebe1b49e3c01a7ed012ed737235fcc', 'e', 'e', 'ml', 10, 10, 10, 909090909, 4);
 
 --
 -- Indexes for dumped tables
@@ -57,7 +58,7 @@ INSERT INTO `art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`
 -- Indexes for table `art_reviewer`
 --
 ALTER TABLE `art_reviewer`
- ADD PRIMARY KEY (`rev_id`), ADD UNIQUE KEY `email` (`email_id`);
+ ADD PRIMARY KEY (`auth_id`), ADD UNIQUE KEY `email` (`email_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -67,7 +68,7 @@ ALTER TABLE `art_reviewer`
 -- AUTO_INCREMENT for table `art_reviewer`
 --
 ALTER TABLE `art_reviewer`
-MODIFY `rev_id` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `auth_id` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
