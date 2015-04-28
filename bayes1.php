@@ -1,6 +1,6 @@
 <?php
-$p_class_y = 6/11;
-$p_class_n = 5/11;
+$p_class_y = 8/11;
+$p_class_n = 3/11;
 
 
 $cpt_e_px_05 = 1/11;
@@ -9,17 +9,17 @@ $cpt_e_px_1015 = 3/11;
 $cpt_e_px_1520 = 1/11;
 $cpt_e_px_20 = 3/11;
 
-$cpt_e_px_y_05 = 1/8;
-$cpt_e_px_y_510 = 3/8;
-$cpt_e_px_y_1015 = 3/8;
-$cpt_e_px_y_1520 = 2/8;
-$cpt_e_px_y_20 = 4/8;
+$cpt_e_px_y_05 = 1/10;
+$cpt_e_px_y_510 = 3/10;
+$cpt_e_px_y_1015 = 3/10;
+$cpt_e_px_y_1520 = 2/10;
+$cpt_e_px_y_20 = 4/10;
 
-$cpt_e_px_n_05 = 2/7;
-$cpt_e_px_n_510 = 2/7;
-$cpt_e_px_n_1015 = 2/7;
-$cpt_e_px_n_1520 = 1/7;
-$cpt_e_px_n_20 = 1/7;
+$cpt_e_px_n_05 = 2/5;
+$cpt_e_px_n_510 = 2/5;
+$cpt_e_px_n_1015 = 2/5;
+$cpt_e_px_n_1520 = 1/5;
+$cpt_e_px_n_20 = 1/5;
 
 
 
@@ -29,17 +29,17 @@ $cpt_np_px_1015 = 1/11;
 $cpt_np_px_1520 = 1/11;
 $cpt_np_px_20 = 2/11;
 
-$cpt_np_px_y_05 = 2/8;
-$cpt_np_px_y_510 = 4/8;
-$cpt_np_px_y_1015 = 2/8;
-$cpt_np_px_y_1520 = 2/8;
-$cpt_np_px_y_20 = 3/8;
+$cpt_np_px_y_05 = 2/10;
+$cpt_np_px_y_510 = 4/10;
+$cpt_np_px_y_1015 = 2/10;
+$cpt_np_px_y_1520 = 2/10;
+$cpt_np_px_y_20 = 3/10;
 
-$cpt_np_px_n_05 = 2/7;
-$cpt_np_px_n_510 = 3/7;
-$cpt_np_px_n_1015 = 1/7;
-$cpt_np_px_n_1520 = 1/7;
-$cpt_np_px_n_20 = 1/7;
+$cpt_np_px_n_05 = 2/5;
+$cpt_np_px_n_510 = 3/5;
+$cpt_np_px_n_1015 = 1/5;
+$cpt_np_px_n_1520 = 1/5;
+$cpt_np_px_n_20 = 1/5;
 
 
 
@@ -49,17 +49,17 @@ $cpt_pr_px_1015 = 2/11;
 $cpt_pr_px_1520 = 1/11;
 $cpt_pr_px_20 = 3/11;
 
-$cpt_pr_px_y_05 = 2/8;
-$cpt_pr_px_y_510 = 2/8;
-$cpt_pr_px_y_1015 = 3/8;
-$cpt_pr_px_y_1520 = 2/8;
-$cpt_pr_px_y_20 = 4/8;
+$cpt_pr_px_y_05 = 2/10;
+$cpt_pr_px_y_510 = 2/10;
+$cpt_pr_px_y_1015 = 3/10;
+$cpt_pr_px_y_1520 = 2/10;
+$cpt_pr_px_y_20 = 4/10;
 
-$cpt_pr_px_n_05 = 3/7;
-$cpt_pr_px_n_510 = 2/7;
-$cpt_pr_px_n_1015 = 1/7;
-$cpt_pr_px_n_1520 = 1/7;
-$cpt_pr_px_n_20 = 1/7;
+$cpt_pr_px_n_05 = 3/5;
+$cpt_pr_px_n_510 = 2/5;
+$cpt_pr_px_n_1015 = 1/5;
+$cpt_pr_px_n_1520 = 1/5;
+$cpt_pr_px_n_20 = 1/5;
 
 
 $sample_n = 510;

@@ -61,16 +61,13 @@
 				$q = "INSERT INTO `delhibvce`.`art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`)    VALUES (NULL, '" . $fname . "', '" . $mname . "', '" . $lname . "', '" . $sign_email . "', '" . $sign_pass . "', '" . $contact_no . "', '" . $address . "', '" . $country . "');";
 				break;
 			case "reviewer":
-				$q = "INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `past_reviews`, `qualification`, `contact_no`, `rev_id`) VALUES ('" . $fname . "', '" . $mname . "', '" . $lname . "', '" . $sign_email . "', '" . $sign_pass . "', '" . $address . "', '" . $country . "', NULL, NULL, NULL, NULL, " . $contact_no . ", NULL);";
+				$q = "INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `past_reviews`, `qualification`, `contact_no`, `aut_id`) VALUES ('" . $fname . "', '" . $mname . "', '" . $lname . "', '" . $sign_email . "', '" . $sign_pass . "', '" . $address . "', '" . $country . "', NULL, NULL, NULL, NULL, " . $contact_no . ", NULL);";
 		}
 		
 		mysql_connect('localhost', 'root', '') or die("<br/>error");
 		mysql_select_db('delhibvce') or die("<br>DB_error");
-		$q_run = mysql_query($q); //or die("<br>error with sign-up please try different credentials" )
+		$q_run = mysql_query($q) or die("<br>error with sign-up please try different credentials" );
 		echo $q_run . $q;
-		if ($q_run != "noerror"  ){
-		echo $core ->ErrorInfo;
-		header( 'Location: error.php' ) ;}
 		{
 		$core ->addAddress($sign_email,$fname);
 		$core ->Subject = 'Your id is created at Artistde CMS';
@@ -86,14 +83,8 @@
 				case "author": header( 'Location: index.php' );
 				break;
 			case "reviewer":
-				$m="SELECT * FROM `art_reviewer` WHERE email_id='".$sign_email."'"; 
-				 $_SESSION['aut_id']=$q_row['aut_id'];
+				 $_SESSION['mail']=$sign_email;
    
-				 mysql_connect('localhost', 'root', '') or die("<br/>error");
-				mysql_select_db('delhibvce') or die("<br>DB_error");
-				$q_run=mysql_query($m) or die("<br/>error_run");
-				$q_row=mysql_fetch_assoc($q_run);
-
 				header( 'Location: nextrev.php' ); break;
 			}
 		}
