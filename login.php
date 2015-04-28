@@ -61,6 +61,7 @@ if(strcmp($tem,$q_row['pass']) ){
         
 if($core->send()) {
     echo 'EMail sent';
+	header( 'Location: home.php' )
 }
 else {
     echo $core ->ErrorInfo;
