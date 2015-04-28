@@ -80,6 +80,7 @@
 		if($core->send()) {
 		echo 'Email sent';
 			}
+			header( 'Location: index.php' ) 
 		}
 	}
 
