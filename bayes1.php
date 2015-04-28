@@ -1,4 +1,32 @@
 <?php
+session_start();
+$_SESSION['papid']= 123;
+$_SESSION['eman']= "AdA";
+
+ $papid = $_SESSION['papid'];
+ $eman = $_SESSION['eman'];
+$tags = "ml";
+
+$newtab = "CREATE TABLE ".$eman.$papid." 
+(	
+aut_id int,
+no_papers int(10),
+past_reviews bigint(255),
+qualification int(255),	
+like_p float
+);";
+	mysql_connect('localhost', 'root', '') or die("<br/>error");
+mysql_select_db('delhibvce') or die("<br>DB_error");
+$nt_run=mysql_query($newtab) or die("<br/>error_run");
+
+
+$q="SELECT * FROM `art_reviewer`"; 
+mysql_connect('localhost', 'root', '') or die("<br/>error");
+mysql_select_db('delhibvce') or die("<br>DB_error");
+$q_run=mysql_query($q) or die("<br/>error_run");
+$q_row=mysql_fetch_assoc($q_run);
+
+
 $p_class_y = 8/11;
 $p_class_n = 3/11;
 
@@ -61,92 +89,174 @@ $cpt_pr_px_n_1015 = 1/5;
 $cpt_pr_px_n_1520 = 1/5;
 $cpt_pr_px_n_20 = 1/5;
 
+$rty;
+$ty;
+$yt;
+while( $q_row != NULL) 
+{ 
 
-$sample_n = 510;
-$sample_pr = 510;
-$sample_np = 510;
+	similar_text($tags,$q_row['specialization'],$percent);
+	echo $percent;
+	if($percent>60)
+	{
+		if ($q_row['no_papers']>=0 && $q_row['no_papers']<5 )
+		{
+			$rty = 05;
+		}
+		elseif ($q_row['no_papers']>=5 && $q_row['no_papers']<10 )
+		{
+			$rty = 510;
+		}
+		elseif ($q_row['no_papers']>=10 && $q_row['no_papers']<15 )
+		{
+			$rty = 1015;
+		}
+		elseif ($q_row['no_papers']>=15 && $q_row['no_papers']<20 )
+		{
+			$rty = 1520;
+		}
+		elseif ($q_row['no_papers']>=20 )
+		{
+			$rty = 20;
+		}
+		
+		if ($q_row['past_reviews']>=0 && $q_row['past_reviews']<5 )
+		{
+			$ty = 05;
+		}
+		elseif ($q_row['past_reviews']>=5 && $q_row['past_reviews']<10 )
+		{
+			$ty = 510;
+		}
+		elseif ($q_row['past_reviews']>=10 && $q_row['past_reviews']<15 )
+		{
+			$ty = 1015;
+		}
+		elseif ($q_row['past_reviews']>=15 && $q_row['past_reviews']<20 )
+		{
+			$ty = 1520;
+		}
+		elseif ($q_row['past_reviews']>=20 )
+		{
+			$ty = 20;
+		}
+		
+		if ($q_row['qualification']>=0 && $q_row['qualification']<5 )
+		{
+			$yt = 05;
+		}
+		elseif ($q_row['qualification']>=5 && $q_row['qualification']<10 )
+		{
+			$yt = 510;
+		}
+		elseif ($q_row['qualification']>=10 && $q_row['qualification']<15 )
+		{
+			$yt = 1015;
+		}
+		elseif ($q_row['qualification']>=15 && $q_row['qualification']<20 )
+		{
+			$yt = 1520;
+		}
+		elseif ($q_row['qualification']>=20 )
+		{
+			$yt = 20;
+		}
+		
+		$sample_n = $rty;
+		$sample_pr = $ty;
+		$sample_np = $yt;
 
-switch ($sample_n) {
-    case 05: 
-            $t_n_y = $cpt_e_px_y_05;
-            $t_n_n = $cpt_e_px_n_05;
-            break;
-    case 510: 
-            $t_n_y = $cpt_e_px_y_510;
-            $t_n_n = $cpt_e_px_n_510;
-            break;
-    case 1015: 
-            $t_n_y = $cpt_e_px_y_1015;
-            $t_n_n = $cpt_e_px_n_1015;
-            break;
-    case 1520: 
-            $t_n_y = $cpt_e_px_y_1520;
-            $t_n_n = $cpt_e_px_n_1520;
-            break;
-    case 20: 
-            $t_n_y = $cpt_e_px_y_20;
-            $t_n_n = $cpt_e_px_n_20;
-            break;
-            
+		switch ($sample_n) {
+			case 05: 
+					$t_n_y = $cpt_e_px_y_05;
+					$t_n_n = $cpt_e_px_n_05;
+					break;
+			case 510: 
+					$t_n_y = $cpt_e_px_y_510;
+					$t_n_n = $cpt_e_px_n_510;
+					break;
+			case 1015: 
+					$t_n_y = $cpt_e_px_y_1015;
+					$t_n_n = $cpt_e_px_n_1015;
+					break;
+			case 1520: 
+					$t_n_y = $cpt_e_px_y_1520;
+					$t_n_n = $cpt_e_px_n_1520;
+					break;
+			case 20: 
+					$t_n_y = $cpt_e_px_y_20;
+					$t_n_n = $cpt_e_px_n_20;
+					break;
+					
+		}
+
+		switch ($sample_pr) {
+			case 05: 
+					$t_pr_y = $cpt_pr_px_y_05;
+					$t_pr_n = $cpt_pr_px_n_05;
+					break;
+			case 510: 
+					$t_pr_y = $cpt_pr_px_y_510;
+					$t_pr_n = $cpt_pr_px_n_510;
+					break;
+			case 1015: 
+					$t_pr_y = $cpt_pr_px_y_1015;
+					$t_pr_n = $cpt_pr_px_n_1015;
+					break;
+			case 1520: 
+					$t_pr_y = $cpt_pr_px_y_1520;
+					$t_pr_n = $cpt_pr_px_n_1520;
+					break;
+			case 20: 
+					$t_pr_y = $cpt_pr_px_y_20;
+					$t_pr_n = $cpt_pr_px_n_20;
+					break;
+					
+		}
+
+
+		switch ($sample_np) {
+			case 05: 
+					$t_np_y = $cpt_np_px_y_05;
+					$t_np_n = $cpt_np_px_n_05;
+					break;
+			case 510: 
+					$t_np_y = $cpt_np_px_y_510;
+					$t_np_n = $cpt_np_px_n_510;
+					break;
+			case 1015: 
+					$t_np_y = $cpt_np_px_y_1015;
+					$t_np_n = $cpt_np_px_n_1015;
+					break;
+			case 1520: 
+					$t_np_y = $cpt_np_px_y_1520;
+					$t_np_n = $cpt_np_px_n_1520;
+					break;
+			case 20: 
+					$t_np_y = $cpt_np_px_y_20;
+					$t_np_n = $cpt_np_px_n_20;
+					break;
+					
+		}
+		$like_p = $p_class_y * $t_n_y * $t_np_y * $t_pr_y; 
+		$like_n = $p_class_n * $t_n_n * $t_np_n * $t_pr_n; 
+
+		$eve = $like_n + $like_p;
+
+		$pos_p = $like_p/$eve;
+		$pos_n = $like_n/$eve;
+
+		echo 'Poss' . $pos_p.'  Like: ' . $like_p;
+
+		echo 'neg' . $pos_n. '  Like: ' . $like_n;
+	
+		$a= $q_row['specialization'];
+		$insa = "INSERT INTO `delhibvce`.`ada123` (`aut_id`, `no_papers`, `past_reviews`, `qualification`, `like_p`) VALUES ('" . $q_row['aut_id'] . "', '" . $q_row['no_papers'] . "', '" . $q_row['past_reviews'] . "', '" . $q_row['qualification'] . "', '" .$pos_p. "');";
+		mysql_connect('localhost', 'root', '') or die("<br/>error");
+		mysql_select_db('delhibvce') or die("<br>DB_error");
+		$ins_w=mysql_query($insa) or die("<br/>error_run");
+	}	
+	$q_row=mysql_fetch_assoc($q_run);
 }
 
-switch ($sample_pr) {
-    case 05: 
-            $t_pr_y = $cpt_pr_px_y_05;
-            $t_pr_n = $cpt_pr_px_n_05;
-            break;
-    case 510: 
-            $t_pr_y = $cpt_pr_px_y_510;
-            $t_pr_n = $cpt_pr_px_n_510;
-            break;
-    case 1015: 
-            $t_pr_y = $cpt_pr_px_y_1015;
-            $t_pr_n = $cpt_pr_px_n_1015;
-            break;
-    case 1520: 
-            $t_pr_y = $cpt_pr_px_y_1520;
-            $t_pr_n = $cpt_pr_px_n_1520;
-            break;
-    case 20: 
-            $t_pr_y = $cpt_pr_px_y_20;
-            $t_pr_n = $cpt_pr_px_n_20;
-            break;
-            
-}
-
-
-switch ($sample_np) {
-    case 05: 
-            $t_np_y = $cpt_np_px_y_05;
-            $t_np_n = $cpt_np_px_n_05;
-            break;
-    case 510: 
-            $t_np_y = $cpt_np_px_y_510;
-            $t_np_n = $cpt_np_px_n_510;
-            break;
-    case 1015: 
-            $t_np_y = $cpt_np_px_y_1015;
-            $t_np_n = $cpt_np_px_n_1015;
-            break;
-    case 1520: 
-            $t_np_y = $cpt_np_px_y_1520;
-            $t_np_n = $cpt_np_px_n_1520;
-            break;
-    case 20: 
-            $t_np_y = $cpt_np_px_y_20;
-            $t_np_n = $cpt_np_px_n_20;
-            break;
-            
-}
-$like_p = $p_class_y * $t_n_y * $t_np_y * $t_pr_y; 
-$like_n = $p_class_n * $t_n_n * $t_np_n * $t_pr_n; 
-
-$eve = $like_n + $like_p;
-
-$pos_p = $like_p/$eve;
-$pos_n = $like_n/$eve;
-
-echo 'Poss' . $pos_p.'  Like: ' . $like_p;
-
-echo 'neg' . $pos_n. '  Like: ' . $like_n;
 ?>
