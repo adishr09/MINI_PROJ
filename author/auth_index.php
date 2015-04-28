@@ -1,25 +1,23 @@
 
 				<?php 
-			    session_start();
-				$log_email=$_SESSION['email'];
-				echo $log_email."AAAAAAAA";
-				/*
-				$name= "SELECT first_name, middle_name, last_name FROM `art_author` WHERE email_id=".$log_email";"
-				$email= $log_email;
-				$address= "SELECT address FROM `art_author` WHERE email_id=".$log_email";"
-				$contact= "SELECT contact_no FROM `art_author` WHERE email_id=".$log_email";"
-			
+				$email=$_SESSION['email'];
+				$name= "SELECT first_name, middle_name, last_name FROM `art_author` WHERE email_id='$email'";
+				$address= "SELECT address FROM `art_author` WHERE email_id='$email'";
+				$contact= "SELECT contact_no FROM `art_author` WHERE email_id='$email'";
 				mysql_connect('localhost', 'root', '') or die("<br/>error");
 				mysql_select_db('delhibvce') or die("<br>DB_error");
-				$name=mysql_query($name) or die("<br/>error_run");
-				$addre=mysql_query($address) or die("<br/>error_run");
-				$conta=mysql_query($contact) or die("<br/>error_run");
-				echo $addre;
-				echo conta;*/
-				?>
+				
+				$name=mysql_query($name) or die("<br/>error_run1");
+				$values1 = mysql_fetch_array($name);
+				
+				$addre=mysql_query($address) or die("<br/>error_run2");
+				$values2 = mysql_fetch_array($addre);
+				
+				$conta=mysql_query($contact) or die("<br/>error_run3");
+				$values3 = mysql_fetch_array($conta);
+ echo'   
 
-<?php echo'   
-		<link rel="shortcut icon" href="../favicon.ico"> 
+ <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="author/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="author/css/style.css" />
 		<script type="text/javascript" src="author/js/modernizr.custom.04022.js"></script>
@@ -53,15 +51,14 @@
 		        <label for="tab-4" class="tab-label-4">Papers</label>
             
 			    <div class="clear-shadow"></div>
-				
 		        <div class="content">
 			        <div class="content-1">
 						<h2>Profile of the Admin</h2>
                         <Table>
-						<tr><td><label>NAME:</label></td><td><?php echo $name ?></td></tr>
-						<tr><td><label>E-MAIL:</label></td><td><?php echo $email ?></td></tr>
-						<tr><td><label>ADDRESS:</label></td><td><?php echo $address ?></td></tr>
-						<tr><td><label>CONTACT:</label></td><td><?php echo $contact ?></td></tr>
+						<tr><td><label>NAME:</label></td><td>'.$values1['first_name'].' '.$values1['middle_name'].' '.$values1['last_name'].'</td></tr>
+						<tr><td><label>E-MAIL:</label></td><td>'.$email.'</td></tr>
+						<tr><td><label>ADDRESS:</label></td><td>'.$values2['address'].'</td></tr>
+						<tr><td><label>CONTACT:</label></td><td>'.$values3['contact_no'].'</td></tr>
 						</TABLE>
 						<button><h4>Update Profile</h4></button>
 				    </div>
