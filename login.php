@@ -1,4 +1,4 @@
-<?php
+`<?php
 	
 session_start();
 require_once 'libs/PHPMailer/PHPMailerAutoload.php'; 
@@ -26,55 +26,45 @@ switch($cars)
     {
       case "author":
       echo "1";
-      $q="SELECT * FROM `art_author` WHERE email_id='".$log_email."'";
+      $q="SELECT * FROM `art_author` WHERE email_id='".$log_email."' AND pass='".$log_pass."'";
  break;
  
       case "reviewer": 
       echo "2";
-         $q="SELECT * FROM `art_reviewer` WHERE email_id='".$log_email."'"; break;
+         $q="SELECT * FROM `art_reviewer` WHERE email_id='".$log_email."' AND pass='".$log_pass."'"; break;
 	default: echo "3";
 	break;
-}     
-$_SESSION['cars']=$cars; 
+}
+if($q){
 mysql_connect('localhost', 'root', '') or die("<br/>error");
 mysql_select_db('delhibvce') or die("<br>DB_error");
 $q_run=mysql_query($q) or die("<br/>error_run");
-$_SESSION['done']=2;
 $q_row=mysql_fetch_assoc($q_run);
+
 print_r( $q_row);
+
 if(strcmp('',$q_row))
 header( 'Location: error.php' ) ;
         
 $fname=$q_row['first_name'];
 $lname=$q_row['last_name'];
 
-if(strcmp($tem,$q_row['pass']) ){
-    $_SESSION['fname']=$fname.' '.$lname;
-    $_SESSION['email']=$q_row['email_id'];
-    $_SESSION['contactno']=$q_row['contact_no'];
-    $_SESSION['aut_id']=$q_row['aut_id'];
+if(strcmp($tem,$q_row['pass'])==0 ){
+    echo $_SESSION['fname']=$fname.' '.$lname;
+    echo $_SESSION['email']=$q_row['email_id'];
+    echo $_SESSION['contactno']=$q_row['contact_no'];
+    echo $_SESSION['aut_id']=$q_row['aut_id'];
     
     echo $_SESSION['fname'];
-    
+    print_r($_SESSION);
     $core ->addAddress($q_row['email_id'], 'ps');
     $core ->Subject = 'You just logged in ';
     $core ->Body = 'Hi, This is to inform that someone just logged into your email account. <br>
     <h1>This is an auto generated mail please dont reply</h1>'; 
-   switch($cars)
-    {
-      case "Author":
-      echo "1";
-       header( 'Location: /author/index.php' ) ;
- break;
- 
-      case "Reviewer": 
-      echo "2";
-         header( 'Location: /reviewer/index.php'  ) ; break;
-        }      
-        
+  
 if($core->send()) {
     echo 'EMail sent';
-  header( 'Location: home.php' ) ;
+	
 }
 else {
     echo $core ->ErrorInfo;
@@ -85,4 +75,6 @@ else {header( 'Location: error.php' ) ;}
 }
 else 
 {header( 'Location: error.php' ) ;}
+}
+else
 ?>

@@ -1,7 +1,24 @@
 
-<?php 
+				<?php 
+			    session_start();
+				$log_email=$_SESSION['email'];
+				echo $log_email."AAAAAAAA";
+				/*
+				$name= "SELECT first_name, middle_name, last_name FROM `art_author` WHERE email_id=".$log_email;
+				$email= $log_email;
+				$address= "SELECT address FROM `art_author` WHERE email_id=".$log_email;
+				$contact= "SELECT contact_no FROM `art_author` WHERE email_id=".$log_email;
+			
+				mysql_connect('localhost', 'root', '') or die("<br/>error");
+				mysql_select_db('delhibvce') or die("<br>DB_error");
+				$name=mysql_query($name) or die("<br/>error_run");
+				$addre=mysql_query($address) or die("<br/>error_run");
+				$conta=mysql_query($contact) or die("<br/>error_run");
+				echo $addre;
+				echo conta;*/
+				?>
 
-echo'   
+<?php echo'   
 		<link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="author/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="author/css/style.css" />
@@ -18,7 +35,7 @@ echo'
 				}
 			</style>
 		<![endif]-->
-    <body>
+    <body style="background-color:rgba(240, 240, 240, 1);">
         <div class="container">
 		 	<header>
 			</header>
@@ -33,78 +50,76 @@ echo'
 		        <label for="tab-3" class="tab-label-3">Work</label>
 			
 	            <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
-		        <label for="tab-4" class="tab-label-4">Contact</label>
+		        <label for="tab-4" class="tab-label-4">Papers</label>
             
 			    <div class="clear-shadow"></div>
 				
 		        <div class="content">
 			        <div class="content-1">
 						<h2>Profile of the Admin</h2>
-                        
+                        <Table>
+						<tr><td><label>NAME:</label></td><td><?php echo $name ?></td></tr>
+						<tr><td><label>E-MAIL:</label></td><td><?php echo $email ?></td></tr>
+						<tr><td><label>ADDRESS:</label></td><td><?php echo $address ?></td></tr>
+						<tr><td><label>CONTACT:</label></td><td><?php echo $contact ?></td></tr>
+						</TABLE>
+						<button><h4>Update Profile</h4></button>
 				    </div>
 			        <div class="content-2">
 						<h2>Submit Manuscript</h2>
                         
-						<form id=\'register\' action=\'validate.php\'  method=\'post\' accept-charset=\'UTF-8\'  enctype="multipart/form-data">
-							<legend><b>Register</b></legend>
+						<form id=\'register\' action=\'author/upload.php\'  method=\'post\' accept-charset=\'UTF-8\'>
 							<fieldset>
-      
-							
-							  
+							<table>
+							<tr><td>  
 							  <label>
-							   File Name* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								  
-                               	</td><td><input type=\'file\' name="fi" id=\'fi\' maxlength="50" /> 
-							  </label><br><br>
-							  
+							   File Name
+								</td><td><input type=\'file\' name=\'username\' id=\'username\' maxlength="50" /> 
+							  </label></td></tr>
+							  <tr><td> 
 							  <label>
-								Subject Category*:
-								 <select name = \'cat\'>
+								Subject Category
+								 </td><td><select name=\'category\'>
 								 <option value="Sub1">s1</option>
 								 <option value="sub2">s2</option>
 								 <option value="sub3">s3</option>
 								 <option value="sub4">s4</option>
 								  </select>
-							  </label><br><br>
-							  
+							  </label></td></tr>
+							  <tr><td> 
 							  <label>
-								Paper Tags*: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								 <input type=\'text\' name=\'paper\' id=\'paper\' maxlength="50" /> 
-							  </label><br><br>
+								Paper Type
+								 </td><td><input type=\'text\' name=\'paper\' id=\'paper\' maxlength="50" /> 
+							  </label></td></tr>
 
 							  
-							  							  
+							  <tr><td> 
 							  <label>
-								Abstract*:
-								 <textarea rows="4" cols="50" name= \'abst\'>
+								Abstract
+								 </td><td><textarea name=\'abstract\' rows="4" cols="50">
 								  </textarea>		 
-							  </label><br><br>
+							  </label></td></tr>
 
 							  <input type=\'hidden\' name=\'submitted\' id=\'submitted\' value=\'1\' class="form_input"/>
 							  
-							  
+							  <tr><td>
 							  <input type=\'submit\' name=\'Submit\' class=\'button\' value=\'Submit\' />
+							  </td></tr></table>
 							  </form>
-					
-                           
-							  					
-					
-					
 					
 					</div>
 			        <div class="content-3">
-						<h2>Portfolio</h2>
-                        <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother\'s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
-						<h3>Examples</h3>
-						<p>Now that we know who you are, I know who I am. I\'m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain\'s going to be? He\'s the exact opposite of the hero. And most times they\'re friends, like you and me! I should\'ve known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
-				    </div>
+						<h2>UPDATES</h2>
+						
+					</div>
+
 				    <div class="content-4">
-						<h2>Contact</h2>
-                        <p>You see? It\'s curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it\'s possible, how it\'s done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an \'unknown entry event\'? Why don\'t they know? If they don\'t know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.</p>
-						<h3>Get in touch</h3>
-						<p>Well, the way they make shows is, they make one show. That show\'s called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they\'re going to make more shows. Some pilots get picked and become television programs. Some don\'t, become nothing. She starred in one of the ones that became nothing. </p>
+						<h2>VIEW SUBMISSIONS</h2>
+                        
 				    </div>
 		        </div>
 			</section>
         </div>
-    </body>';?>
+    </body>
+	';
+?>
