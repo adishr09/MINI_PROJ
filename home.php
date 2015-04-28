@@ -1,4 +1,5 @@
 <?php session_start();
+	print_r ($_SESSION);
 	$lolwa = $_SESSION['done'];
 	switch($lolwa)
 	{
@@ -41,7 +42,7 @@
 		switch($lol)
     {
       case "author":
-      require("/author/index.php");
+      require("auth_index.php");
  break;
  
       case "reviewer": 
