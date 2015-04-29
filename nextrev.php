@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <html>
 <form action="nextnrev.php" method="POST" style="margin:0;">	
 				<h1>Continue</h1>

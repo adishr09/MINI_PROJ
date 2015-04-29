@@ -1,12 +1,20 @@
 
 				<?php 
 				$email=$_SESSION['email'];
-				$name= "SELECT first_name, middle_name, last_name FROM `art_author` WHERE email_id='$email'";
+				$name= "SELECT aut_id, first_name, middle_name, last_name FROM `art_author` WHERE email_id='$email'";
 				$address= "SELECT address FROM `art_author` WHERE email_id='$email'";
 				$contact= "SELECT contact_no FROM `art_author` WHERE email_id='$email'";
 				mysql_connect('localhost', 'root', '') or die("<br/>error");
 				mysql_select_db('delhibvce') or die("<br>DB_error");
 				
+				$name=mysql_query($name) or die("<br/>error_run1");
+				$values1 = mysql_fetch_array($name);
+				
+				$papers= "SELECT * FROM `art_paper` WHERE aut_id='$values1['aut_id']'";
+				
+				$papers=mysql_query($papers) or die("<br/>error_run7");
+				$values4 = mysql_fetch_array($papers);
+								
 				$name=mysql_query($name) or die("<br/>error_run1");
 				$values1 = mysql_fetch_array($name);
 				
