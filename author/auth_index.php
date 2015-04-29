@@ -10,14 +10,6 @@
 				$name=mysql_query($name) or die("<br/>error_run1");
 				$values1 = mysql_fetch_array($name);
 				
-				//$papers= "SELECT * FROM `art_paper` WHERE aut_id='$values1['aut_id']'";
-				
-				//$papers=mysql_query($papers) or die("<br/>error_run7");
-				//$values4 = mysql_fetch_array($papers);
-								
-				//$name=mysql_query($name) or die("<br/>error_run1");
-				//$values1 = mysql_fetch_array($name);
-				
 				$addre=mysql_query($address) or die("<br/>error_run2");
 				$values2 = mysql_fetch_array($addre);
 				
