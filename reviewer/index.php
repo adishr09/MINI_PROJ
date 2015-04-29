@@ -60,7 +60,7 @@
                     
 			        <div class="content-2">
 						<h2>Response</h2>
-                        <form id=\'response\' action=\'response.php\' method=\'post\' accept-charset=\'UTF-8\'>
+                        <form id=\'response\' action=\'reviewer/response.php\' method=\'post\' accept-charset=\'UTF-8\'>
 						<fieldset>
                         <table>                
                         <tr><td>
