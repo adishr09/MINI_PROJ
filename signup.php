@@ -14,7 +14,7 @@
 	$core->Port       = 465;
 	$core->From       = 'noreply-aristide@gmail.com';
 	$core->FromName   = 'Aristide CMS';
-	$errors           = ' noerror';
+	$errors           = ' ';
 
 	if(empty($_POST) === false){
 	$required_fields= array ('fname','lname','sign_email','sign_pass','contact_no','address','country');
@@ -61,7 +61,8 @@
 				$q = "INSERT INTO `delhibvce`.`art_author` (`aut_id`, `first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `contact_no`, `address`, `country`)    VALUES (NULL, '" . $fname . "', '" . $mname . "', '" . $lname . "', '" . $sign_email . "', '" . $sign_pass . "', '" . $contact_no . "', '" . $address . "', '" . $country . "');";
 				break;
 			case "reviewer":
-				$q = "INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `specialization`, `no_papers`, `past_reviews`, `qualification`, `contact_no`, `aut_id`) VALUES ('" . $fname . "', '" . $mname . "', '" . $lname . "', '" . $sign_email . "', '" . $sign_pass . "', '" . $address . "', '" . $country . "', NULL, NULL, NULL, NULL, " . $contact_no . ", NULL);";
+				$q = "INSERT INTO `delhibvce`.`art_reviewer` (`first_name`, `middle_name`, `last_name`, `email_id`, `pass`, `address`, `country`, `contact_no`) 
+													VALUES ('" . $fname . "', '" . $mname . "', '" . $lname . "', '" . $sign_email . "', '" . $sign_pass . "', '" . $address . "', '" . $country . "', " . $contact_no . ");";
 		}
 		
 		mysql_connect('localhost', 'root', '') or die("<br/>error");
