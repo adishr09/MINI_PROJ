@@ -101,9 +101,9 @@
 							<label>
 								Response</td><td>
                                 <select name=\'response_opt\'>
-								 <option value="Sub1">Rejected</option>
-								 <option value="sub2">Accepted</option>
-								 <option value="sub3">Accepted with Minor Corrections</option>
+								 <option value="REJECTED">Rejected</option>
+								 <option value="ACCEPTED">Accepted</option>
+								 <option value="MINOR CORRECTIONS">Accepted with Minor Corrections</option>
 								</select>
 							</label>
                             </tr></td>
