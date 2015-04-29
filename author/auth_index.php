@@ -71,7 +71,7 @@
 							<tr><td>  
 							  <label>
 							   File Name
-								</td><td><input type=\'file\' name=\'username\' id=\'username\' maxlength="50" /> 
+								</td><td><input type="file" name="username"  maxlength="50" /> 
 							  </label></td></tr>
 							  <tr><td> 
 							  <label>

@@ -1,7 +1,7 @@
 <?php
 
 $_SESSION['papid']= 123;
-$_SESSION['eman']= $_FILES['fi']['name'];
+$_SESSION['eman']= "hjghjh";
 
  $papid = $_SESSION['papid'];
  $eman = $_SESSION['eman'];
@@ -267,7 +267,7 @@ $mailq_run=mysql_query($mailq) or die("<br/>error_run");
 $mailq_row=mysql_fetch_assoc($mailq_run);
 echo $mailq_row['email_id']; 
 
-$abst= "LALALALALALALALALALALALALALALALALA";
+$abst= $abstract;
 require_once 'libs/PHPMailer/PHPMailerAutoload.php'; 
 $core = new PHPMailer();
 $core -> isSMTP();
@@ -281,7 +281,7 @@ $core -> SMTPSecure = 'ssl';
 $core -> Port = 465;
 
 
-$core ->From = 'priyansh.singh.delhi@gmail.com';
+$core ->From = 'aristidecm@gmail.com';
 $core ->FromName = 'PS';
 $core ->addReplyTo = ('priyansh.singh.delhi@gmail.com');
 $core ->addAddress('priyansh.singh.delhi@gmail.com', 'ps');
@@ -290,7 +290,7 @@ $core ->addAddress('aristidecm@gmail.com', 'ps');
 
 $core ->addCC('priyansh.singh.delhi@gmail.com', 'ps');
 
-$core ->addAttachment($_FILES['fi']['name']);
+//$core ->addAttachment($_FILES[['name']);
 $core ->isHTML(true);
 $core ->Subject = 'New Submission ';
 $core ->Body = $abst; 
@@ -298,7 +298,7 @@ $core ->AltBody= $abst;
 
 if($core->send()) {
     echo 'EMail sent';
-  header( 'Location: home.php' ) ;
+  header( 'Location: ../home.php' ) ;
 }
 else {
     echo $core ->ErrorInfo;
