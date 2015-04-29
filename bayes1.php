@@ -10,6 +10,7 @@ $tags = "ml";
 $newtab = "CREATE TABLE ".$eman.$papid." 
 (	
 aut_id int,
+email_id varchar(50),
 no_papers int(10),
 past_reviews bigint(255),
 qualification int(255),	
@@ -251,12 +252,56 @@ while( $q_row != NULL)
 		echo 'neg' . $pos_n. '  Like: ' . $like_n;
 	
 		$a= $q_row['specialization'];
-		$insa = "INSERT INTO `delhibvce`.`ada123` (`aut_id`, `no_papers`, `past_reviews`, `qualification`, `like_p`) VALUES ('" . $q_row['aut_id'] . "', '" . $q_row['no_papers'] . "', '" . $q_row['past_reviews'] . "', '" . $q_row['qualification'] . "', '" .$pos_p. "');";
+		$insa = "INSERT INTO `delhibvce`.`".$eman.$papid."` (`aut_id`, `no_papers`, `past_reviews`, `qualification`, `like_p`, `email_id`) VALUES ('" . $q_row['aut_id'] . "', '" . $q_row['no_papers'] . "', '" . $q_row['past_reviews'] . "', '" . $q_row['qualification'] . "', '" .$pos_p. "', '".$q_row['email_id']."');";
 		mysql_connect('localhost', 'root', '') or die("<br/>error");
 		mysql_select_db('delhibvce') or die("<br>DB_error");
 		$ins_w=mysql_query($insa) or die("<br/>error_run");
 	}	
 	$q_row=mysql_fetch_assoc($q_run);
 }
+$mailq = "SELECT * FROM `".$eman.$papid."` ORDER BY `like_p` DESC";
+mysql_connect('localhost', 'root', '') or die("<br/>error");
+mysql_select_db('delhibvce') or die("<br>DB_error");
+$mailq_run=mysql_query($mailq) or die("<br/>error_run");
+$mailq_row=mysql_fetch_assoc($mailq_run);
+echo $mailq_row['email_id']; 
+
+$abst= "LALALALALALALALALALALALALALALALALA";
+require_once 'libs/PHPMailer/PHPMailerAutoload.php'; 
+$core = new PHPMailer();
+$core -> isSMTP();
+$core -> SMTPAuth = true;
+$core ->SMTPDebug = 1;
+
+$core -> Host = 'smtp.gmail.com';
+$core -> Username = 'priyansh.singh.delhi@gmail.com';
+$core -> Password = '9971486416';
+$core -> SMTPSecure = 'ssl';
+$core -> Port = 465;
+
+
+$core ->From = 'priyansh.singh.delhi@gmail.com';
+$core ->FromName = 'PS';
+$core ->addReplyTo = ('priyansh.singh.delhi@gmail.com');
+$core ->addAddress('priyansh.singh.delhi@gmail.com', 'ps');
+$core ->addAddress('adi.shr09@gmail.com', 'ps');
+$core ->addAddress('aristidecm@gmail.com', 'ps');
+
+$core ->addCC('priyansh.singh.delhi@gmail.com', 'ps');
+
+$core ->addAttachment($_FILES['fi']['name']);
+$core ->isHTML(true);
+$core ->Subject = 'New Submission ';
+$core ->Body = $abst; 
+$core ->AltBody= $abst;
+
+if($core->send()) {
+    echo 'EMail sent';
+  header( 'Location: home.php' ) ;
+}
+else {
+    echo $core ->ErrorInfo;
+}
+
 
 ?>
