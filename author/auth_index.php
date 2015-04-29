@@ -53,7 +53,7 @@
 			    <div class="clear-shadow"></div>
 		        <div class="content">
 			        <div class="content-1">
-						<h2>Profile of the Admin</h2>
+						<h2>Profile of the Author</h2>
                         <Table>
 						<tr><td><label>NAME:</label></td><td>'.$values1['first_name'].' '.$values1['middle_name'].' '.$values1['last_name'].'</td></tr>
 						<tr><td><label>E-MAIL:</label></td><td>'.$email.'</td></tr>
@@ -85,7 +85,7 @@
 							  </label></td></tr>
 							  <tr><td> 
 							  <label>
-								Paper Type
+								Paper Tags
 								 </td><td><input type=\'text\' name=\'paper\' id=\'paper\' maxlength="50" /> 
 							  </label></td></tr>
 

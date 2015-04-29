@@ -1,7 +1,7 @@
 <?php
-session_start();
+
 $_SESSION['papid']= 123;
-$_SESSION['eman']= "AdA";
+$_SESSION['eman']= $_FILES['fi']['name'];
 
  $papid = $_SESSION['papid'];
  $eman = $_SESSION['eman'];
@@ -290,7 +290,7 @@ $core ->addAddress('aristidecm@gmail.com', 'ps');
 
 $core ->addCC('priyansh.singh.delhi@gmail.com', 'ps');
 
-//$core ->addAttachment($_FILES['fi']['name']);
+$core ->addAttachment($_FILES['fi']['name']);
 $core ->isHTML(true);
 $core ->Subject = 'New Submission ';
 $core ->Body = $abst; 
